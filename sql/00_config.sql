@@ -29,7 +29,7 @@ DEF moat369_conf_encrypt_html   = 'OFF';
 DEF moat369_conf_compress_html  = 'OFF';
 
 -- Defines GCP360 execution mode. Options are (FULL, REPORT_ONLY or LOAD_ONLY)
--- FULL        = Call OCI-CLI exporter (generates json) and generate gcp360 report. -> NOT IMPLEMENTED YET
+-- FULL        = Call gcloud exporter (generates json) and generate gcp360 report. -> NOT IMPLEMENTED YET
 -- REPORT_ONLY = Generate gcp360 report only. Must have ZIP file with all jsons inside execution folder.
 -- LOAD_ONLY   = Generate gcp360 database tables only. Must have ZIP file with all jsons inside execution folder. No output ZIP will be generated.
 -- DEF gcp360_exec_mode = 'REPORT_ONLY';

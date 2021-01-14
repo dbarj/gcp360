@@ -10,7 +10,7 @@ DEF moat369_sw_rpt_cols   = '8'
 DEF moat369_sw_misc_fdr   = 'js'
 DEF moat369_sw_dbtool     = 'N'
 
-DEF moat369_sw_logo_title_1 = "gcp360 is a tool that provides a 360-degree view of OCI."
+DEF moat369_sw_logo_title_1 = "gcp360 is a tool that provides a 360-degree view of GCP."
 DEF moat369_sw_logo_title_2 = ""
 DEF moat369_sw_logo_title_3 = ""
 DEF moat369_sw_logo_title_4 = ""
@@ -19,8 +19,8 @@ DEF moat369_sw_logo_title_6 = ""
 DEF moat369_sw_logo_title_7 = ""
 DEF moat369_sw_logo_title_8 = ""
 
-DEF moat369_sw_vYYNN = 'v20.08'
-DEF moat369_sw_vrsn  = '&&moat369_sw_vYYNN. (2021-12-21)'
+DEF moat369_sw_vYYNN = 'v21.01'
+DEF moat369_sw_vrsn  = '&&moat369_sw_vYYNN. (2021-01-21)'
 
 DEF moat369_sw_copyright = 'gcp360 (c) 2021, All rights reserved.'
 DEF moat369_sw_author    = 'rodrigo.jorge'

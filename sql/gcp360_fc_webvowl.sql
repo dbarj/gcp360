@@ -197,7 +197,7 @@ PRO       "undefined" : "GCP360 Infrastructure View"
 PRO     },
 PRO     "iri" : "https://docs.cloud.oracle.com/",
 PRO     "description" : {
-PRO       "undefined" : "Infrastructure Network configuration in OCI."
+PRO       "undefined" : "Infrastructure Network configuration in GCP."
 PRO     },
 PRO     "version": "1.0",
 PRO     "author": "Rodrigo Jorge"
