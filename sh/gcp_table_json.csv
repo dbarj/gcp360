@@ -1,0 +1,258 @@
+gcp_access-context-manager-cloud-bindings.json,GCP_ACCESS_CONTEXT_MANAGER_CLOUD_BINDINGS,Access Context Manager Cloud Bindings
+gcp_access-context-manager-levels-conditions.json,GCP_ACCESS_CONTEXT_MANAGER_LEVELS_CONDITIONS,Access Context Manager Levels Conditions
+gcp_access-context-manager-levels.json,GCP_ACCESS_CONTEXT_MANAGER_LEVELS,Access Context Manager Levels
+gcp_access-context-manager-perimeters-dry-run.json,GCP_ACCESS_CONTEXT_MANAGER_PERIMETERS_DRY_RUN,Access Context Manager Perimeters Dry Run
+gcp_access-context-manager-perimeters.json,GCP_ACCESS_CONTEXT_MANAGER_PERIMETERS,Access Context Manager Perimeters
+gcp_access-context-manager-policies.json,GCP_ACCESS_CONTEXT_MANAGER_POLICIES,Access Context Manager Policies
+gcp_active-directory-domains.json,GCP_ACTIVE_DIRECTORY_DOMAINS,Active Directory Domains
+gcp_ai-platform-jobs.json,GCP_AI_PLATFORM_JOBS,Ai Platform Jobs
+gcp_ai-platform-models.json,GCP_AI_PLATFORM_MODELS,Ai Platform Models
+gcp_ai-platform-versions.json,GCP_AI_PLATFORM_VERSIONS,Ai Platform Versions
+gcp_apigee-apis.json,GCP_APIGEE_APIS,Apigee Apis
+gcp_apigee-applications.json,GCP_APIGEE_APPLICATIONS,Apigee Applications
+gcp_apigee-deployments.json,GCP_APIGEE_DEPLOYMENTS,Apigee Deployments
+gcp_apigee-developers.json,GCP_APIGEE_DEVELOPERS,Apigee Developers
+gcp_apigee-environments.json,GCP_APIGEE_ENVIRONMENTS,Apigee Environments
+gcp_apigee-organizations.json,GCP_APIGEE_ORGANIZATIONS,Apigee Organizations
+gcp_apigee-products.json,GCP_APIGEE_PRODUCTS,Apigee Products
+gcp_app-domain-mappings.json,GCP_APP_DOMAIN_MAPPINGS,App Domain Mappings
+gcp_app-firewall-rules.json,GCP_APP_FIREWALL_RULES,App Firewall Rules
+gcp_app-instances.json,GCP_APP_INSTANCES,App Instances
+gcp_app-regions.json,GCP_APP_REGIONS,App Regions
+gcp_app-services.json,GCP_APP_SERVICES,App Services
+gcp_app-ssl-certificates.json,GCP_APP_SSL_CERTIFICATES,App Ssl Certificates
+gcp_app-versions.json,GCP_APP_VERSIONS,App Versions
+gcp_artifacts-docker-images.json,GCP_ARTIFACTS_DOCKER_IMAGES,Artifacts Docker Images
+gcp_artifacts-docker-tags.json,GCP_ARTIFACTS_DOCKER_TAGS,Artifacts Docker Tags
+gcp_artifacts-locations.json,GCP_ARTIFACTS_LOCATIONS,Artifacts Locations
+gcp_artifacts-packages.json,GCP_ARTIFACTS_PACKAGES,Artifacts Packages
+gcp_artifacts-repositories.json,GCP_ARTIFACTS_REPOSITORIES,Artifacts Repositories
+gcp_artifacts-tags.json,GCP_ARTIFACTS_TAGS,Artifacts Tags
+gcp_artifacts-versions.json,GCP_ARTIFACTS_VERSIONS,Artifacts Versions
+gcp_asset-feeds.json,GCP_ASSET_FEEDS,Asset Feeds
+gcp_auth.json,GCP_AUTH,Auth
+gcp_bigtable-app-profiles.json,GCP_BIGTABLE_APP_PROFILES,Bigtable App Profiles
+gcp_bigtable-backups.json,GCP_BIGTABLE_BACKUPS,Bigtable Backups
+gcp_bigtable-clusters.json,GCP_BIGTABLE_CLUSTERS,Bigtable Clusters
+gcp_bigtable-instances-tables.json,GCP_BIGTABLE_INSTANCES_TABLES,Bigtable Instances Tables
+gcp_bigtable-instances.json,GCP_BIGTABLE_INSTANCES,Bigtable Instances
+gcp_billing-budgets.json,GCP_BILLING_BUDGETS,Billing Budgets
+gcp_builds.json,GCP_BUILDS,Builds
+gcp_components-repositories.json,GCP_COMPONENTS_REPOSITORIES,Components Repositories
+gcp_components.json,GCP_COMPONENTS,Components
+gcp_composer-environments-storage-dags.json,GCP_COMPOSER_ENVIRONMENTS_STORAGE_DAGS,Composer Environments Storage Dags
+gcp_composer-environments-storage-data.json,GCP_COMPOSER_ENVIRONMENTS_STORAGE_DATA,Composer Environments Storage Data
+gcp_composer-environments-storage-plugins.json,GCP_COMPOSER_ENVIRONMENTS_STORAGE_PLUGINS,Composer Environments Storage Plugins
+gcp_composer-environments.json,GCP_COMPOSER_ENVIRONMENTS,Composer Environments
+gcp_compute-accelerator-types.json,GCP_COMPUTE_ACCELERATOR_TYPES,Compute Accelerator Types
+gcp_compute-addresses.json,GCP_COMPUTE_ADDRESSES,Compute Addresses
+gcp_compute-backend-buckets.json,GCP_COMPUTE_BACKEND_BUCKETS,Compute Backend Buckets
+gcp_compute-backend-services.json,GCP_COMPUTE_BACKEND_SERVICES,Compute Backend Services
+gcp_compute-commitments.json,GCP_COMPUTE_COMMITMENTS,Compute Commitments
+gcp_compute-disk-types.json,GCP_COMPUTE_DISK_TYPES,Compute Disk Types
+gcp_compute-disks.json,GCP_COMPUTE_DISKS,Compute Disks
+gcp_compute-external-vpn-gateways.json,GCP_COMPUTE_EXTERNAL_VPN_GATEWAYS,Compute External Vpn Gateways
+gcp_compute-firewall-rules.json,GCP_COMPUTE_FIREWALL_RULES,Compute Firewall Rules
+gcp_compute-forwarding-rules.json,GCP_COMPUTE_FORWARDING_RULES,Compute Forwarding Rules
+gcp_compute-health-checks.json,GCP_COMPUTE_HEALTH_CHECKS,Compute Health Checks
+gcp_compute-http-health-checks.json,GCP_COMPUTE_HTTP_HEALTH_CHECKS,Compute Http Health Checks
+gcp_compute-https-health-checks.json,GCP_COMPUTE_HTTPS_HEALTH_CHECKS,Compute Https Health Checks
+gcp_compute-images.json,GCP_COMPUTE_IMAGES,Compute Images
+gcp_compute-instance-groups-managed-instance-configs.json,GCP_COMPUTE_INSTANCE_GROUPS_MANAGED_INSTANCE_CONFIGS,Compute Instance Groups Managed Instance Configs
+gcp_compute-instance-groups-managed.json,GCP_COMPUTE_INSTANCE_GROUPS_MANAGED,Compute Instance Groups Managed
+gcp_compute-instance-groups-unmanaged.json,GCP_COMPUTE_INSTANCE_GROUPS_UNMANAGED,Compute Instance Groups Unmanaged
+gcp_compute-instance-groups.json,GCP_COMPUTE_INSTANCE_GROUPS,Compute Instance Groups
+gcp_compute-instance-templates.json,GCP_COMPUTE_INSTANCE_TEMPLATES,Compute Instance Templates
+gcp_compute-instances.json,GCP_COMPUTE_INSTANCES,Compute Instances
+gcp_compute-interconnects-attachments.json,GCP_COMPUTE_INTERCONNECTS_ATTACHMENTS,Compute Interconnects Attachments
+gcp_compute-interconnects-locations.json,GCP_COMPUTE_INTERCONNECTS_LOCATIONS,Compute Interconnects Locations
+gcp_compute-interconnects.json,GCP_COMPUTE_INTERCONNECTS,Compute Interconnects
+gcp_compute-machine-types.json,GCP_COMPUTE_MACHINE_TYPES,Compute Machine Types
+gcp_compute-network-endpoint-groups.json,GCP_COMPUTE_NETWORK_ENDPOINT_GROUPS,Compute Network Endpoint Groups
+gcp_compute-networks-peerings.json,GCP_COMPUTE_NETWORKS_PEERINGS,Compute Networks Peerings
+gcp_compute-networks-subnets.json,GCP_COMPUTE_NETWORKS_SUBNETS,Compute Networks Subnets
+gcp_compute-networks-vpc-access-connectors.json,GCP_COMPUTE_NETWORKS_VPC_ACCESS_CONNECTORS,Compute Networks Vpc Access Connectors
+gcp_compute-networks-vpc-access-locations.json,GCP_COMPUTE_NETWORKS_VPC_ACCESS_LOCATIONS,Compute Networks Vpc Access Locations
+gcp_compute-networks.json,GCP_COMPUTE_NETWORKS,Compute Networks
+gcp_compute-os-config-patch-deployments.json,GCP_COMPUTE_OS_CONFIG_PATCH_DEPLOYMENTS,Compute Os Config Patch Deployments
+gcp_compute-os-config-patch-jobs.json,GCP_COMPUTE_OS_CONFIG_PATCH_JOBS,Compute Os Config Patch Jobs
+gcp_compute-os-login-ssh-keys.json,GCP_COMPUTE_OS_LOGIN_SSH_KEYS,Compute Os Login Ssh Keys
+gcp_compute-packet-mirrorings.json,GCP_COMPUTE_PACKET_MIRRORINGS,Compute Packet Mirrorings
+gcp_compute-project-info.json,GCP_COMPUTE_PROJECT_INFO,Compute Project Info
+gcp_compute-regions.json,GCP_COMPUTE_REGIONS,Compute Regions
+gcp_compute-reservations.json,GCP_COMPUTE_RESERVATIONS,Compute Reservations
+gcp_compute-resource-policies.json,GCP_COMPUTE_RESOURCE_POLICIES,Compute Resource Policies
+gcp_compute-routers-nats.json,GCP_COMPUTE_ROUTERS_NATS,Compute Routers Nats
+gcp_compute-routers.json,GCP_COMPUTE_ROUTERS,Compute Routers
+gcp_compute-routes.json,GCP_COMPUTE_ROUTES,Compute Routes
+gcp_compute-security-policies.json,GCP_COMPUTE_SECURITY_POLICIES,Compute Security Policies
+gcp_compute-shared-vpc-associated-projects.json,GCP_COMPUTE_SHARED_VPC_ASSOCIATED_PROJECTS,Compute Shared Vpc Associated Projects
+gcp_compute-snapshots.json,GCP_COMPUTE_SNAPSHOTS,Compute Snapshots
+gcp_compute-sole-tenancy-node-groups.json,GCP_COMPUTE_SOLE_TENANCY_NODE_GROUPS,Compute Sole Tenancy Node Groups
+gcp_compute-sole-tenancy-node-templates.json,GCP_COMPUTE_SOLE_TENANCY_NODE_TEMPLATES,Compute Sole Tenancy Node Templates
+gcp_compute-sole-tenancy-node-types.json,GCP_COMPUTE_SOLE_TENANCY_NODE_TYPES,Compute Sole Tenancy Node Types
+gcp_compute-ssl-certificates.json,GCP_COMPUTE_SSL_CERTIFICATES,Compute Ssl Certificates
+gcp_compute-ssl-policies.json,GCP_COMPUTE_SSL_POLICIES,Compute Ssl Policies
+gcp_compute-target-grpc-proxies.json,GCP_COMPUTE_TARGET_GRPC_PROXIES,Compute Target Grpc Proxies
+gcp_compute-target-http-proxies.json,GCP_COMPUTE_TARGET_HTTP_PROXIES,Compute Target Http Proxies
+gcp_compute-target-https-proxies.json,GCP_COMPUTE_TARGET_HTTPS_PROXIES,Compute Target Https Proxies
+gcp_compute-target-instances.json,GCP_COMPUTE_TARGET_INSTANCES,Compute Target Instances
+gcp_compute-target-pools.json,GCP_COMPUTE_TARGET_POOLS,Compute Target Pools
+gcp_compute-target-ssl-proxies.json,GCP_COMPUTE_TARGET_SSL_PROXIES,Compute Target Ssl Proxies
+gcp_compute-target-tcp-proxies.json,GCP_COMPUTE_TARGET_TCP_PROXIES,Compute Target Tcp Proxies
+gcp_compute-target-vpn-gateways.json,GCP_COMPUTE_TARGET_VPN_GATEWAYS,Compute Target Vpn Gateways
+gcp_compute-tpus-accelerator-types.json,GCP_COMPUTE_TPUS_ACCELERATOR_TYPES,Compute Tpus Accelerator Types
+gcp_compute-tpus-locations.json,GCP_COMPUTE_TPUS_LOCATIONS,Compute Tpus Locations
+gcp_compute-tpus-versions.json,GCP_COMPUTE_TPUS_VERSIONS,Compute Tpus Versions
+gcp_compute-tpus.json,GCP_COMPUTE_TPUS,Compute Tpus
+gcp_compute-url-maps.json,GCP_COMPUTE_URL_MAPS,Compute Url Maps
+gcp_compute-vpn-gateways.json,GCP_COMPUTE_VPN_GATEWAYS,Compute Vpn Gateways
+gcp_compute-vpn-tunnels.json,GCP_COMPUTE_VPN_TUNNELS,Compute Vpn Tunnels
+gcp_compute-zones.json,GCP_COMPUTE_ZONES,Compute Zones
+gcp_config-configurations.json,GCP_CONFIG_CONFIGURATIONS,Config Configurations
+gcp_config.json,GCP_CONFIG,Config
+gcp_container-binauthz-attestations.json,GCP_CONTAINER_BINAUTHZ_ATTESTATIONS,Container Binauthz Attestations
+gcp_container-binauthz-attestors.json,GCP_CONTAINER_BINAUTHZ_ATTESTORS,Container Binauthz Attestors
+gcp_container-clusters.json,GCP_CONTAINER_CLUSTERS,Container Clusters
+gcp_container-hub-memberships.json,GCP_CONTAINER_HUB_MEMBERSHIPS,Container Hub Memberships
+gcp_container-images.json,GCP_CONTAINER_IMAGES,Container Images
+gcp_container-node-pools.json,GCP_CONTAINER_NODE_POOLS,Container Node Pools
+gcp_data-catalog-entries.json,GCP_DATA_CATALOG_ENTRIES,Data Catalog Entries
+gcp_data-catalog-entry-groups.json,GCP_DATA_CATALOG_ENTRY_GROUPS,Data Catalog Entry Groups
+gcp_data-catalog-tags.json,GCP_DATA_CATALOG_TAGS,Data Catalog Tags
+gcp_data-catalog-taxonomies-policy-tags.json,GCP_DATA_CATALOG_TAXONOMIES_POLICY_TAGS,Data Catalog Taxonomies Policy Tags
+gcp_data-catalog-taxonomies.json,GCP_DATA_CATALOG_TAXONOMIES,Data Catalog Taxonomies
+gcp_dataflow-jobs.json,GCP_DATAFLOW_JOBS,Dataflow Jobs
+gcp_dataproc-autoscaling-policies.json,GCP_DATAPROC_AUTOSCALING_POLICIES,Dataproc Autoscaling Policies
+gcp_dataproc-clusters.json,GCP_DATAPROC_CLUSTERS,Dataproc Clusters
+gcp_dataproc-jobs.json,GCP_DATAPROC_JOBS,Dataproc Jobs
+gcp_dataproc-workflow-templates.json,GCP_DATAPROC_WORKFLOW_TEMPLATES,Dataproc Workflow Templates
+gcp_datastore-indexes.json,GCP_DATASTORE_INDEXES,Datastore Indexes
+gcp_debug-logpoints.json,GCP_DEBUG_LOGPOINTS,Debug Logpoints
+gcp_debug-snapshots.json,GCP_DEBUG_SNAPSHOTS,Debug Snapshots
+gcp_debug-targets.json,GCP_DEBUG_TARGETS,Debug Targets
+gcp_deployment-manager-deployments.json,GCP_DEPLOYMENT_MANAGER_DEPLOYMENTS,Deployment Manager Deployments
+gcp_deployment-manager-manifests.json,GCP_DEPLOYMENT_MANAGER_MANIFESTS,Deployment Manager Manifests
+gcp_deployment-manager-resources.json,GCP_DEPLOYMENT_MANAGER_RESOURCES,Deployment Manager Resources
+gcp_deployment-manager-types.json,GCP_DEPLOYMENT_MANAGER_TYPES,Deployment Manager Types
+gcp_dns-dns-keys.json,GCP_DNS_DNS_KEYS,Dns Dns Keys
+gcp_dns-domains-list-user-verified.json,GCP_DNS_DOMAINS_LIST_USER_VERIFIED,Dns Domains List User Verified
+gcp_dns-managed-zones.json,GCP_DNS_MANAGED_ZONES,Dns Managed Zones
+gcp_dns-policies.json,GCP_DNS_POLICIES,Dns Policies
+gcp_dns-project-info.json,GCP_DNS_PROJECT_INFO,Dns Project Info
+gcp_dns-record-sets-changes.json,GCP_DNS_RECORD_SETS_CHANGES,Dns Record Sets Changes
+gcp_dns-record-sets.json,GCP_DNS_RECORD_SETS,Dns Record Sets
+gcp_endpoints-configs.json,GCP_ENDPOINTS_CONFIGS,Endpoints Configs
+gcp_endpoints-services.json,GCP_ENDPOINTS_SERVICES,Endpoints Services
+gcp_eventarc-triggers.json,GCP_EVENTARC_TRIGGERS,Eventarc Triggers
+gcp_filestore-instances.json,GCP_FILESTORE_INSTANCES,Filestore Instances
+gcp_filestore-locations.json,GCP_FILESTORE_LOCATIONS,Filestore Locations
+gcp_filestore-regions.json,GCP_FILESTORE_REGIONS,Filestore Regions
+gcp_filestore-zones.json,GCP_FILESTORE_ZONES,Filestore Zones
+gcp_firebase-test-android-locales.json,GCP_FIREBASE_TEST_ANDROID_LOCALES,Firebase Test Android Locales
+gcp_firebase-test-android-models.json,GCP_FIREBASE_TEST_ANDROID_MODELS,Firebase Test Android Models
+gcp_firebase-test-android-versions.json,GCP_FIREBASE_TEST_ANDROID_VERSIONS,Firebase Test Android Versions
+gcp_firebase-test-ios-locales.json,GCP_FIREBASE_TEST_IOS_LOCALES,Firebase Test Ios Locales
+gcp_firebase-test-ios-models.json,GCP_FIREBASE_TEST_IOS_MODELS,Firebase Test Ios Models
+gcp_firebase-test-ios-versions.json,GCP_FIREBASE_TEST_IOS_VERSIONS,Firebase Test Ios Versions
+gcp_firebase-test-network-profiles.json,GCP_FIREBASE_TEST_NETWORK_PROFILES,Firebase Test Network Profiles
+gcp_firestore-indexes-composite.json,GCP_FIRESTORE_INDEXES_COMPOSITE,Firestore Indexes Composite
+gcp_firestore-indexes-fields.json,GCP_FIRESTORE_INDEXES_FIELDS,Firestore Indexes Fields
+gcp_functions-event-types.json,GCP_FUNCTIONS_EVENT_TYPES,Functions Event Types
+gcp_functions-regions.json,GCP_FUNCTIONS_REGIONS,Functions Regions
+gcp_functions.json,GCP_FUNCTIONS,Functions
+gcp_game-locations.json,GCP_GAME_LOCATIONS,Game Locations
+gcp_game-servers-clusters.json,GCP_GAME_SERVERS_CLUSTERS,Game Servers Clusters
+gcp_game-servers-configs.json,GCP_GAME_SERVERS_CONFIGS,Game Servers Configs
+gcp_game-servers-deployments.json,GCP_GAME_SERVERS_DEPLOYMENTS,Game Servers Deployments
+gcp_game-servers-realms.json,GCP_GAME_SERVERS_REALMS,Game Servers Realms
+gcp_healthcare-datasets.json,GCP_HEALTHCARE_DATASETS,Healthcare Datasets
+gcp_healthcare-dicom-stores.json,GCP_HEALTHCARE_DICOM_STORES,Healthcare Dicom Stores
+gcp_healthcare-fhir-stores.json,GCP_HEALTHCARE_FHIR_STORES,Healthcare Fhir Stores
+gcp_healthcare-hl7v2-stores.json,GCP_HEALTHCARE_HL7V2_STORES,Healthcare Hl7V2 Stores
+gcp_iam-roles.json,GCP_IAM_ROLES,Iam Roles
+gcp_iam-service-accounts-keys.json,GCP_IAM_SERVICE_ACCOUNTS_KEYS,Iam Service Accounts Keys
+gcp_iam-service-accounts.json,GCP_IAM_SERVICE_ACCOUNTS,Iam Service Accounts
+gcp_iam-workload-identity-pools-providers.json,GCP_IAM_WORKLOAD_IDENTITY_POOLS_PROVIDERS,Iam Workload Identity Pools Providers
+gcp_iam-workload-identity-pools.json,GCP_IAM_WORKLOAD_IDENTITY_POOLS,Iam Workload Identity Pools
+gcp_identity-groups-memberships.json,GCP_IDENTITY_GROUPS_MEMBERSHIPS,Identity Groups Memberships
+gcp_iot-devices-configs.json,GCP_IOT_DEVICES_CONFIGS,Iot Devices Configs
+gcp_iot-devices-credentials.json,GCP_IOT_DEVICES_CREDENTIALS,Iot Devices Credentials
+gcp_iot-devices-states.json,GCP_IOT_DEVICES_STATES,Iot Devices States
+gcp_iot-devices.json,GCP_IOT_DEVICES,Iot Devices
+gcp_iot-registries-credentials.json,GCP_IOT_REGISTRIES_CREDENTIALS,Iot Registries Credentials
+gcp_iot-registries.json,GCP_IOT_REGISTRIES,Iot Registries
+gcp_kms-import-jobs.json,GCP_KMS_IMPORT_JOBS,Kms Import Jobs
+gcp_kms-keyrings.json,GCP_KMS_KEYRINGS,Kms Keyrings
+gcp_kms-keys-versions.json,GCP_KMS_KEYS_VERSIONS,Kms Keys Versions
+gcp_kms-keys.json,GCP_KMS_KEYS,Kms Keys
+gcp_kms-locations.json,GCP_KMS_LOCATIONS,Kms Locations
+gcp_logging-logs.json,GCP_LOGGING_LOGS,Logging Logs
+gcp_logging-metrics.json,GCP_LOGGING_METRICS,Logging Metrics
+gcp_logging-resource-descriptors.json,GCP_LOGGING_RESOURCE_DESCRIPTORS,Logging Resource Descriptors
+gcp_logging-sinks.json,GCP_LOGGING_SINKS,Logging Sinks
+gcp_meta-apis-collections.json,GCP_META_APIS_COLLECTIONS,Meta Apis Collections
+gcp_meta-apis-discovery.json,GCP_META_APIS_DISCOVERY,Meta Apis Discovery
+gcp_meta-apis-messages.json,GCP_META_APIS_MESSAGES,Meta Apis Messages
+gcp_meta-apis-methods.json,GCP_META_APIS_METHODS,Meta Apis Methods
+gcp_meta-apis.json,GCP_META_APIS,Meta Apis
+gcp_meta-cache-completers.json,GCP_META_CACHE_COMPLETERS,Meta Cache Completers
+gcp_meta-cache.json,GCP_META_CACHE,Meta Cache
+gcp_meta-cli-trees.json,GCP_META_CLI_TREES,Meta Cli Trees
+gcp_ml-engine-jobs.json,GCP_ML_ENGINE_JOBS,Ml Engine Jobs
+gcp_ml-engine-models.json,GCP_ML_ENGINE_MODELS,Ml Engine Models
+gcp_ml-engine-versions.json,GCP_ML_ENGINE_VERSIONS,Ml Engine Versions
+gcp_monitoring-dashboards.json,GCP_MONITORING_DASHBOARDS,Monitoring Dashboards
+gcp_network-management-connectivity-tests.json,GCP_NETWORK_MANAGEMENT_CONNECTIVITY_TESTS,Network Management Connectivity Tests
+gcp_organizations.json,GCP_ORGANIZATIONS,Organizations
+gcp_projects.json,GCP_PROJECTS,Projects
+gcp_pubsub-lite-subscriptions.json,GCP_PUBSUB_LITE_SUBSCRIPTIONS,Pubsub Lite Subscriptions
+gcp_pubsub-lite-topics.json,GCP_PUBSUB_LITE_TOPICS,Pubsub Lite Topics
+gcp_pubsub-snapshots.json,GCP_PUBSUB_SNAPSHOTS,Pubsub Snapshots
+gcp_pubsub-subscriptions.json,GCP_PUBSUB_SUBSCRIPTIONS,Pubsub Subscriptions
+gcp_pubsub-topics.json,GCP_PUBSUB_TOPICS,Pubsub Topics
+gcp_recommender-insights.json,GCP_RECOMMENDER_INSIGHTS,Recommender Insights
+gcp_recommender-recommendations.json,GCP_RECOMMENDER_RECOMMENDATIONS,Recommender Recommendations
+gcp_redis-instances.json,GCP_REDIS_INSTANCES,Redis Instances
+gcp_redis-regions.json,GCP_REDIS_REGIONS,Redis Regions
+gcp_redis-zones.json,GCP_REDIS_ZONES,Redis Zones
+gcp_resource-manager-folders.json,GCP_RESOURCE_MANAGER_FOLDERS,Resource Manager Folders
+gcp_resource-manager-org-policies.json,GCP_RESOURCE_MANAGER_ORG_POLICIES,Resource Manager Org Policies
+gcp_run-configurations.json,GCP_RUN_CONFIGURATIONS,Run Configurations
+gcp_run-domain-mappings.json,GCP_RUN_DOMAIN_MAPPINGS,Run Domain Mappings
+gcp_run-regions.json,GCP_RUN_REGIONS,Run Regions
+gcp_run-revisions.json,GCP_RUN_REVISIONS,Run Revisions
+gcp_run-routes.json,GCP_RUN_ROUTES,Run Routes
+gcp_run-services.json,GCP_RUN_SERVICES,Run Services
+gcp_scc-assets.json,GCP_SCC_ASSETS,Scc Assets
+gcp_scc-findings.json,GCP_SCC_FINDINGS,Scc Findings
+gcp_scc-notifications.json,GCP_SCC_NOTIFICATIONS,Scc Notifications
+gcp_scheduler-jobs.json,GCP_SCHEDULER_JOBS,Scheduler Jobs
+gcp_secrets-locations.json,GCP_SECRETS_LOCATIONS,Secrets Locations
+gcp_secrets-versions.json,GCP_SECRETS_VERSIONS,Secrets Versions
+gcp_secrets.json,GCP_SECRETS,Secrets
+gcp_service-directory-endpoints.json,GCP_SERVICE_DIRECTORY_ENDPOINTS,Service Directory Endpoints
+gcp_service-directory-locations.json,GCP_SERVICE_DIRECTORY_LOCATIONS,Service Directory Locations
+gcp_service-directory-namespaces.json,GCP_SERVICE_DIRECTORY_NAMESPACES,Service Directory Namespaces
+gcp_service-directory-services.json,GCP_SERVICE_DIRECTORY_SERVICES,Service Directory Services
+gcp_services-peered-dns-domains.json,GCP_SERVICES_PEERED_DNS_DOMAINS,Services Peered Dns Domains
+gcp_services-vpc-peerings.json,GCP_SERVICES_VPC_PEERINGS,Services Vpc Peerings
+gcp_services.json,GCP_SERVICES,Services
+gcp_source-repos.json,GCP_SOURCE_REPOS,Source Repos
+gcp_spanner-backups.json,GCP_SPANNER_BACKUPS,Spanner Backups
+gcp_spanner-databases-sessions.json,GCP_SPANNER_DATABASES_SESSIONS,Spanner Databases Sessions
+gcp_spanner-databases.json,GCP_SPANNER_DATABASES,Spanner Databases
+gcp_spanner-instance-configs.json,GCP_SPANNER_INSTANCE_CONFIGS,Spanner Instance Configs
+gcp_spanner-instances.json,GCP_SPANNER_INSTANCES,Spanner Instances
+gcp_sql-backups.json,GCP_SQL_BACKUPS,Sql Backups
+gcp_sql-databases.json,GCP_SQL_DATABASES,Sql Databases
+gcp_sql-flags.json,GCP_SQL_FLAGS,Sql Flags
+gcp_sql-instances.json,GCP_SQL_INSTANCES,Sql Instances
+gcp_sql-ssl-certs.json,GCP_SQL_SSL_CERTS,Sql Ssl Certs
+gcp_sql-ssl-client-certs.json,GCP_SQL_SSL_CLIENT_CERTS,Sql Ssl Client Certs
+gcp_sql-tiers.json,GCP_SQL_TIERS,Sql Tiers
+gcp_sql-users.json,GCP_SQL_USERS,Sql Users
+gcp_tasks-locations.json,GCP_TASKS_LOCATIONS,Tasks Locations
+gcp_tasks-queues.json,GCP_TASKS_QUEUES,Tasks Queues
+gcp_tasks.json,GCP_TASKS,Tasks
+gcp_workspace-add-ons-deployments.json,GCP_WORKSPACE_ADD_ONS_DEPLOYMENTS,Workspace Add Ons Deployments
