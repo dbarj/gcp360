@@ -35,8 +35,9 @@ v_gcp360_con_name="gcp360-tool"
 v_apache_con_name="gcp360-apache"
 
 # Don't change unless asked.
-v_git_branch="master"
-v_gcp360_uid=54322
+v_git_branch="v1.01"
+v_gcp360_uid=55555
+v_git_oracle_commit_hash="4f064778150234ee2be2a1176b026c5e875965ac"
 
 # Check if root
 [ "$(id -u -n)" != "root" ] && echo "Must be executed as root! Exiting..." && exit 1
@@ -92,8 +93,14 @@ if [ "$(docker images -q oracle/database:18.4.0-xe)" == "" ]
 then
   rm -rf docker-images/
   git clone https://github.com/oracle/docker-images.git
+  if [ -n "${v_git_oracle_commit_hash}" ]
+  then
+    cd docker-images
+    git checkout ${v_git_oracle_commit_hash}
+    cd -
+  fi
   cd docker-images/OracleDatabase/SingleInstance/dockerfiles
-  ./buildDockerImage.sh -v 18.4.0 -x &
+  ./buildContainerImage.sh -v 18.4.0 -x &
   loop_wait_proc "$!"
   cd -
   rm -rf docker-images/
@@ -106,7 +113,7 @@ docker ps -a
 
 # Those IDs cannot be changed as they must be aligned with the docker image.
 # 54321 -> User: oracle
-# 54322 -> User: gcp360
+# 55555 -> User: gcp360
 
 if ! $(getent passwd gcp360 > /dev/null)
 then
