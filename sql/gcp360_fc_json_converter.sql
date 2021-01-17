@@ -226,7 +226,7 @@ BEGIN
     viewname  => '&&gcp360_temp_view.',
     tablename => '&&gcp360_temp_table.',
     jcolname  => '&&gcp360_temp_clob.',
-    path =>      '$.data',
+    path =>      '$',
     frequency =>  0);
 EXCEPTION
   WHEN empty_data_guide THEN
