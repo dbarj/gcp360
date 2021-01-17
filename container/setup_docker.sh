@@ -267,11 +267,13 @@ The instructions below will be saved on \"${v_master_directory}/INSTRUCTIONS.txt
 
 GCP360 install/upgrade finished successfully.
 
-To run GCP360, first setup the tenancy credentials on \"${v_master_directory}/.oci/config\" file.
+To run GCP360, first setup the account credentials with \"gcloud auth login\" command:
 
-Then, connect locally in this compute as gcp360 user (\"sudo su - gcp360\") or ROOT and test oci-cli:
+[gcp360@localhost ]$ docker exec -it --user gcp360 ${v_gcp360_con_name} gcloud auth login
 
-[gcp360@localhost ]$ docker exec -it --user gcp360 ${v_gcp360_con_name} bash -c 'export GCP_CLI_AUTH=instance_principal; cd /tmp/; /u01/gcp360_tool/app/sh/gcp_json_export.sh Comp-Instances'
+Then, connect locally in this compute as gcp360 user (\"sudo su - gcp360\") or ROOT and test gcloud:
+
+[gcp360@localhost ]$ docker exec -it --user gcp360 ${v_gcp360_con_name} bash -c 'cd /tmp/; /u01/gcp360_tool/app/sh/gcp_json_export.sh organizations'
 
 If the command above produce a JSON output with all your compute instances, everything is set correctly.
 

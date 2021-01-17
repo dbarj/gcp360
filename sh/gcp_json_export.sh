@@ -165,7 +165,7 @@ fi
 if ! $(which ${v_gcp} >&- 2>&-)
 then
   echoError "Could not find gcloud binary. Please adapt the path in the script if not in \$PATH."
-  echoError "Download page: https://github.com/oracle/gcloud"
+  echoError "Download page: https://cloud.google.com/sdk/docs/install"
   exit 1
 fi
 

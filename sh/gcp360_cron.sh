@@ -324,7 +324,7 @@ then
   then
     v_prefix_file=$(ls -t1 gcp_json_export_*_*.zip | head -n 1 | sed 's/_[^_]*$//')
     v_exp_file="${v_prefix_file}.zip"
-    ${v_dir_gcp360}/sh/gcp_json_merger.sh "${v_prefix_file}_*.zip" "${v_exp_file}"
+    bash ${v_dir_gcp360}/sh/gcp_json_merger.sh "${v_prefix_file}_*.zip" "${v_exp_file}"
   else
     echo_unable_find "gcp_json_export_*_*.zip"
     exitError "Restart the script removing GCP360_LAST_EXEC_STEP from ${v_config_file}."

@@ -19,7 +19,7 @@
 #   limitations under the License.
 #
 #************************************************************************
-# Available at: https://github.com/dbarj/oci-scripts
+# Available at: https://github.com/dbarj/gcp-scripts
 # Created on: Aug/2018 by Rodrigo Jorge
 # Version 1.07
 #************************************************************************

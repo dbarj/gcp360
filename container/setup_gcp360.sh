@@ -20,7 +20,7 @@ v_gcp360_tool='/u01/gcp360_tool'
 v_gcp360_www='/u01/www'
 v_gcp360_config="${v_gcp360_tool}/scripts"
 v_gcp360_netadmin="${v_gcp360_config}/network"
-v_ocicli_dir="/u01/.oci"
+v_gcloud_dir="/u01/.gcloud"
 
 # v_replace_config_files = true or false.
 # Keep false to reuse your configuration. True to recreate default files.
@@ -30,7 +30,19 @@ v_exec_date=$(/bin/date '+%Y%m%d%H%M%S')
 
 yum install -y oraclelinux-developer-release-el7.x86_64
 yum-config-manager --enable ol7_developer
-yum install -y --setopt=tsflags=nodocs python-oci-cli jq git which
+
+tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
+[google-cloud-sdk]
+name=Google Cloud SDK
+baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+       https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOM
+
+yum install -y --setopt=tsflags=nodocs google-cloud-sdk jq git which
 
 mkdir -p ${v_gcp360_www}
 mkdir -p ${v_gcp360_tool}
@@ -65,10 +77,6 @@ then
   if [ -f ${v_gcp360_config}/gcp360.cfg ]
   then
     mv ${v_gcp360_config}/gcp360.cfg ${v_gcp360_config}/gcp360.cfg.${v_exec_date}
-  fi
-  if [ -f ${v_gcp360_home}/.oci/config ]
-  then
-    mv ${v_gcp360_home}/.oci/config ${v_gcp360_home}/.oci/config.${v_exec_date}
   fi
 fi
 
@@ -119,21 +127,10 @@ fi
 
 chmod 600 ${v_gcp360_config}/gcp360.cfg
 
-mkdir -p ${v_ocicli_dir}
-chown -R gcp360: ${v_ocicli_dir}
-ln -s ${v_ocicli_dir} ${v_gcp360_home}/.oci
-
-if [ ! -f ${v_gcp360_home}/.oci/config ]
-then
-  cat << 'EOF' > ${v_gcp360_home}/.oci/config
-[DEFAULT]
-tenancy=ocid1.tenancy.oc1..xxx
-region=us-ashburn-1
-EOF
-fi
-
-chmod 600 ${v_gcp360_home}/.oci/config
-chown gcp360: ${v_gcp360_home}/.oci/config
+mkdir -p ${v_gcloud_dir}
+chown -R gcp360: ${v_gcloud_dir}
+mkdir ${v_gcp360_home}/.config
+ln -s ${v_gcloud_dir} ${v_gcp360_home}/.config/gcloud
 
 cd ${v_gcp360_tool}
 git clone https://github.com/dbarj/gcp360.git
