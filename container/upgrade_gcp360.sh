@@ -23,6 +23,7 @@ v_master_directory="/u01"
 [ -n "${GCP360_ROOT_DIR}" ] && v_master_directory="${GCP360_ROOT_DIR}"
 
 v_gcp360_tool="${v_master_directory}/gcp360_tool"
+v_gcp360_config="${v_gcp360_tool}/scripts"
 
 v_exec_date=$(/bin/date '+%Y%m%d%H%M%S')
 
