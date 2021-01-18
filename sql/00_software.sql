@@ -1,7 +1,7 @@
 /*************************** software configuration (do not modify ) ****************************/
 
 DEF moat369_sw_name       = 'gcp360'
-DEF moat369_sw_logo_file  = 'gcp360.jpg'
+DEF moat369_sw_logo_file  = 'gcp360.png'
 DEF moat369_sw_icon_file  = 'gcp360.ico'
 DEF moat369_sw_cert_file  = ''
 DEF moat369_sw_title_desc = 'Google Cloud Infrastructure 360-degree View'
