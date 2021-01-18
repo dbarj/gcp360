@@ -30,6 +30,7 @@
 5b,ci_cd.sql,'CI/CD'
 5c,identity_security.sql,'Identity and Security'
 5d,kms.sql,'Cryptographic Keys'
+5e,security.sql,'Security'
 --
 6a,data_analytics.sql,'Data Analytics'
 6b,databases.sql,'Databases'
