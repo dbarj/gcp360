@@ -28,7 +28,7 @@
 --
 5a,billing.sql,'Billing'
 5b,ci_cd.sql,'CI/CD'
-5c,identity_security.sql,'Identity & Security'
+5c,identity_security.sql,'Identity and Security'
 5d,kms.sql,'Cryptographic Keys'
 --
 6a,data_analytics.sql,'Data Analytics'
