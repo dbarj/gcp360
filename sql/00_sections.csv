@@ -3,13 +3,47 @@
 -- Format: Section ID [1a - 9z], File Sufix Name, Section Description, Skip Variables (If last field is empty or its variables return NULL, sql WILL be executed)
 --
 --1a,infrastructure.sql,'GCP Infrastructure'
-1b,organization.sql,'Organization Information'
-1c,computes.sql,'Compute Instances'
+--1b,organization.sql,'Organization Information'
+--1c,computes.sql,'Compute Instances'
+1d,management_tools.sql,'Management Tools'
+1e,monitoring.sql,'Monitoring'
+--
+2a,app.sql,'App Engine deployments'
+2b,compute.sql,'Compute Engine resources'
+2c,container.sql,'Containers'
+2d,functions.sql,'Google Cloud Functions'
+2e,run.sql,'Cloud Run applications'
+--
+3a,dns.sql,'DNS'
+3b,service_directory.sql,'Service Directory'
+3c,networking.sql,'Networking'
+3d,storage.sql,'Storage'
+--
+4a,ai_ml.sql,'AI and Machine Learning'
+4b,api.sql,'API Platform and Ecosystems'
+4c,anthos.sql,'Anthos CLI'
+4d,iot.sql,'Internet of Things'
+4e,mobile.sql,'Mobile'
+4f,solutions.sql,'Solutions'
+--
+5a,billing.sql,'Billing'
+5b,ci_cd.sql,'CI/CD'
+5c,identity_security.sql,'Identity & Security'
+5d,kms.sql,'Cryptographic Keys'
+--
+6a,data_analytics.sql,'Data Analytics'
+6b,databases.sql,'Databases'
 --
 --7a,json_metadata.sql,'Metadata',&&skip_section_json.&&gcp360_loc_skip.
 --
+8a,sdk_tools.sql,'SDK Tools'
+8b,meta_apis.sql,'Meta APIs'
+8c,others.sql,'Others'
+8d,misc.sql,'Miscellaneous'
 --8a,restype.sql,'Cloud Resource-type List'
-8b,misc.sql,'Miscellaneous'
 --
 -- Note: You can optionally have sections 0a_pre.sql and 0b_post.sql (not defined on this csv).
 -- They are not mandatory and they instruct moat to run only once a initial sql before all of them (0a) or after all of them (0b).
+
+
+
