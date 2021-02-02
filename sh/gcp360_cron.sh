@@ -62,7 +62,7 @@ trap 'exitError "Code interrupted."' SIGINT SIGTERM
 
 # Directories
 
-v_thisdir="$(dirname "$(readlink -f "$0")")"
+v_thisdir="$(dirname "$0")"
 v_basedir="$(readlink -f "$v_thisdir/../")"   # Folder of GCP360 Tool
 v_confdir=$v_basedir/scripts                  # Folder of this script
 
