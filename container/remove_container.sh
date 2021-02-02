@@ -6,7 +6,7 @@ set -x
 
 trap_err ()
 {
-  echo "Error on line $1 of \"remove_docker.sh\"."
+  echo "Error on line $1 of \"remove_container.sh\"."
   exit 1
 }
 

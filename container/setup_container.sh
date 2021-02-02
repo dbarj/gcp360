@@ -8,7 +8,7 @@
 # 2 - Apache Webserver to expose gcp360 output.
 #
 # To execute the latest stable version of this script, run the line below:
-# bash -c "$(curl -L https://raw.githubusercontent.com/dbarj/gcp360/master/container/setup_docker.sh)"
+# bash -c "$(curl -L https://raw.githubusercontent.com/dbarj/gcp360/master/container/setup_container.sh)"
 #
 ######################################################
 
@@ -17,7 +17,7 @@ set -x
 
 trap_err ()
 {
-  echo "Error on line $1 of \"setup_docker.sh\"."
+  echo "Error on line $1 of \"setup_container.sh\"."
   exit 1
 }
 
