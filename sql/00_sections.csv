@@ -35,7 +35,7 @@
 6a,data_analytics.sql,'Data Analytics'
 6b,databases.sql,'Databases'
 --
---7a,json_metadata.sql,'Metadata',&&skip_section_json.&&gcp360_loc_skip.
+7a,json_metadata.sql,'Metadata',&&skip_section_json.&&gcp360_loc_skip.
 --
 8a,sdk_tools.sql,'SDK Tools'
 8b,meta_apis.sql,'Meta APIs'

@@ -122,7 +122,6 @@ if [ ! -f ${v_gcp360_config}/gcp360.cfg ]
 then
   echo "export TNS_ADMIN=${v_gcp360_netadmin}" > ${v_gcp360_config}/gcp360.cfg
   echo "v_conn='/@gcp360xe'" >> ${v_gcp360_config}/gcp360.cfg
-  echo 'export GCP_CLI_AUTH=instance_principal' >> ${v_gcp360_config}/gcp360.cfg
 fi
 
 chmod 600 ${v_gcp360_config}/gcp360.cfg
