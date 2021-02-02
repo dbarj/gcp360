@@ -41,8 +41,8 @@ then
 fi
 
 # cp -av ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
+# chown gcp360: ${v_gcp360_config}/gcp360_run.sh
 
-chown gcp360: ${v_gcp360_config}/gcp360_run.sh
 chown -R gcp360: ${v_gcp360_tool}/app/
 
 ##############
