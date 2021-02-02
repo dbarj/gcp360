@@ -333,17 +333,6 @@ else
   echo_skip_section "Export Merge"
 fi
 
-if [ -z "${v_exp_file}" ]
-then
-  if ls gcp_json_export_*.zip 1> /dev/null 2>&1
-  then
-    v_exp_file=$(ls -t1 gcp_json_export_*.zip | head -n 1)
-  else
-    echo_unable_find "gcp_json_export_*.zip"
-    exitError "Restart the script removing GCP360_LAST_EXEC_STEP from ${v_config_file}."
-  fi
-fi
-
 ###################
 ### Move Output ###
 ###################
@@ -355,6 +344,18 @@ incr_gcp360_step
 
 if [ $GCP360_SKIP_PLACE_ZIPS -eq 0 ]
 then
+
+  if [ -z "${v_exp_file}" ]
+  then
+    if ls gcp_json_export_*.zip 1> /dev/null 2>&1
+    then
+      v_exp_file=$(ls -t1 gcp_json_export_*.zip | head -n 1)
+    else
+      echo_unable_find "gcp_json_export_*.zip"
+      exitError "Restart the script removing GCP360_LAST_EXEC_STEP from ${v_config_file}."
+    fi
+  fi
+
   rm -f ${v_dir_gcpout}/gcp_json_export_*.zip
 
   if [ -n "${v_gcp_bucket}" ]

@@ -146,6 +146,7 @@ then
 fi
 
 ln -s ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
+ln -s ${v_gcp360_tool}/app/sh/gcp360_db_only.sh ${v_gcp360_config}/gcp360_db_only.sh
 # cp -av ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
 
 # Change GCP360 password
