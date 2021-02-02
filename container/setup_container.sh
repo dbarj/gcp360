@@ -3,12 +3,12 @@
 
 ######################################################
 #
-# This script will create 2 docker containers:
+# This script will create 2 containers:
 # 1 - GCP360 engine with 18c XE database.
 # 2 - Apache Webserver to expose gcp360 output.
 #
 # To execute the latest stable version of this script, run the line below:
-# bash -c "$(curl -L https://raw.githubusercontent.com/dbarj/gcp360/master/container/setup_container.sh)"
+# bash -c "$(curl -L https://raw.githubusercontent.com/dbarj/gcp360/v1.01/container/setup_container.sh)"
 #
 ######################################################
 

@@ -1,5 +1,6 @@
 #!/bin/bash -x
 # v1.0
+# This script will remove GCP360 files and folders.
 
 set -eo pipefail
 set -x

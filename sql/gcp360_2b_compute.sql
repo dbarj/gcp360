@@ -334,7 +334,7 @@ END;
 
 -----------------------------------------
 
-DEF title = 'Compute Instances'
+DEF title = 'Compute Instances Raw'
 DEF main_table = 'GCP_COMPUTE_INSTANCES'
 
 BEGIN
@@ -344,6 +344,13 @@ FROM   GCP_COMPUTE_INSTANCES t1
 }';
 END;
 /
+@@&&9a_pre_one.
+
+-----------------------------------------
+
+DEF title = 'Compute Instances'
+DEF main_table = 'GCP_COMPUTE_INSTANCES'
+@@&&fc_gen_select. '&&main_table.' 'sql_text'
 @@&&9a_pre_one.
 
 -----------------------------------------

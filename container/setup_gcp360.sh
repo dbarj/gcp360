@@ -1,6 +1,6 @@
 #!/bin/bash
 # v1.1
-# This script will make the deployment and configuration of GCP360 files and folders.
+# This script will deploy and configure of GCP360 files and folders.
 
 set -eo pipefail
 set -x
@@ -145,7 +145,8 @@ then
   cd -
 fi
 
-cp -av ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
+ln -s ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
+# cp -av ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
 
 # Change GCP360 password
 v_gcp360_pass="$(openssl rand -hex 6)"

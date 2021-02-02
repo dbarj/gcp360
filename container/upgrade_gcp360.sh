@@ -1,6 +1,6 @@
 #!/bin/bash
 # v1.0
-# This script will make the deployment and configuration of GCP360 files and folders.
+# This script will upgrade and configure of GCP360 files and folders.
 
 # To execute the latest version of this script, execute the line below:
 # bash -c "$(curl -L https://raw.githubusercontent.com/dbarj/gcp360/master/container/upgrade_gcp360.sh)"
@@ -40,7 +40,7 @@ then
   cd -
 fi
 
-cp -av ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
+# cp -av ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
 
 chown gcp360: ${v_gcp360_config}/gcp360_run.sh
 chown -R gcp360: ${v_gcp360_tool}/app/
