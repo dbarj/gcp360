@@ -115,8 +115,10 @@ then
     fi
     cp -av "${v_db_version_file}" ./docker-images/OracleDatabase/SingleInstance/dockerfiles/${v_db_version}/
   fi
-  ./docker-images/OracleDatabase/SingleInstance/dockerfiles/buildContainerImage.sh -v ${v_db_version_param} &
+  cd ./docker-images/OracleDatabase/SingleInstance/dockerfiles/
+  ./buildContainerImage.sh -v ${v_db_version_param} &
   loop_wait_proc "$!"
+  cd -
   rm -rf docker-images/
 else
   echo "Docker image for the database is already created."
