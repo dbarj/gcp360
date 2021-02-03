@@ -37,7 +37,7 @@ v_apache_con_name="gcp360-apache"
 # Don't change unless asked.
 v_git_branch="v1.01"
 v_gcp360_uid=55555
-v_git_oracle_commit_hash="4f064778150234ee2be2a1176b026c5e875965ac"
+# v_git_oracle_commit_hash="4f064778150234ee2be2a1176b026c5e875965ac"
 # v_db_version_param="18.4.0 -x"
 # v_db_version_container="18.4.0-xe"
 v_db_version_param="19.3.0 -e"
@@ -103,10 +103,8 @@ then
     git checkout ${v_git_oracle_commit_hash}
     cd -
   fi
-  cd docker-images/OracleDatabase/SingleInstance/dockerfiles
-  ./buildContainerImage.sh -v ${v_db_version_param} &
+  ./docker-images/OracleDatabase/SingleInstance/dockerfiles/buildContainerImage.sh -v ${v_db_version_param} &
   loop_wait_proc "$!"
-  cd -
   rm -rf docker-images/
 else
   echo "Docker image for the database is already created."
