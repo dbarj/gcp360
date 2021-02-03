@@ -96,11 +96,11 @@ fi
 # Create wallet files.
 v_wallet_pass="Oracle.123.$(openssl rand -hex 4)"
 orapki wallet create -wallet ${v_gcp360_netadmin} -auto_login -pwd ${v_wallet_pass}
-mkstore -wrl ${v_gcp360_netadmin} -createCredential gcp360xe gcp360 oracle <<< "${v_wallet_pass}"
+mkstore -wrl ${v_gcp360_netadmin} -createCredential gcp360db gcp360 oracle <<< "${v_wallet_pass}"
 
-if ! grep -qF 'GCP360XE' ${v_gcp360_netadmin}/tnsnames.ora
+if ! grep -qF 'GCP360DB' ${v_gcp360_netadmin}/tnsnames.ora
 then
-  echo 'GCP360XE =
+  echo 'GCP360DB =
   (DESCRIPTION =
     (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
     (CONNECT_DATA =
@@ -121,7 +121,7 @@ fi
 if [ ! -f ${v_gcp360_config}/gcp360.cfg ]
 then
   echo "export TNS_ADMIN=${v_gcp360_netadmin}" > ${v_gcp360_config}/gcp360.cfg
-  echo "v_conn='/@gcp360xe'" >> ${v_gcp360_config}/gcp360.cfg
+  echo "v_conn='/@gcp360db'" >> ${v_gcp360_config}/gcp360.cfg
 fi
 
 chmod 600 ${v_gcp360_config}/gcp360.cfg
@@ -151,7 +151,7 @@ ln -sf ${v_gcp360_tool}/app/sh/gcp360_db_only.sh ${v_gcp360_config}/gcp360_db_on
 # Change GCP360 password
 v_gcp360_pass="$(openssl rand -hex 6)"
 bash ${v_gcp360_tool}/app/container/change_gcp360_pass.sh "${v_gcp360_pass}"
-mkstore -wrl ${v_gcp360_netadmin} -modifyCredential gcp360xe gcp360 ${v_gcp360_pass} <<< "${v_wallet_pass}"
+mkstore -wrl ${v_gcp360_netadmin} -modifyCredential gcp360db gcp360 ${v_gcp360_pass} <<< "${v_wallet_pass}"
 
 if [ -f ${v_gcp360_config}/credentials ]
 then
