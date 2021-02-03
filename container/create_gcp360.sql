@@ -1,6 +1,10 @@
 whenever sqlerror exit sql.sqlcode
 conn / as sysdba
-alter session set container=XEPDB1;
+col name new_v pdb_name nopri
+select name from v$pdbs where CON_ID=3;
+alter session set container=&&pdb_name.;
+undef pdb_name
+col name clear
 create profile DEFAULT_PASSWORD_NOEXP limit password_life_time unlimited;
 create user GCP360 identified by "oracle";
 alter user GCP360 default tablespace USERS quota unlimited on USERS profile DEFAULT_PASSWORD_NOEXP;
