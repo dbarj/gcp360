@@ -38,10 +38,13 @@ v_apache_con_name="gcp360-apache"
 v_git_branch="v1.01"
 v_gcp360_uid=55555
 # v_git_oracle_commit_hash="4f064778150234ee2be2a1176b026c5e875965ac"
-# v_db_version_param="18.4.0 -x"
-# v_db_version_container="18.4.0-xe"
-v_db_version_param="19.3.0 -e"
-v_db_version_container="19.3.0-ee"
+# v_db_version="18.4.0"
+# v_db_version_param="${v_db_version} -x"
+# v_db_version_container="${v_db_version}-xe"
+v_db_version="19.3.0"
+v_db_version_param="${v_db_version} -e"
+v_db_version_container="${v_db_version}-ee"
+v_db_version_file="LINUX.X64_193000_db_home.zip"
 
 # Check if root
 [ "$(id -u -n)" != "root" ] && echo "Must be executed as root! Exiting..." && exit 1
@@ -102,6 +105,15 @@ then
     cd docker-images
     git checkout ${v_git_oracle_commit_hash}
     cd -
+  fi
+  if [ -n "${v_db_version_file}" ]
+  then
+    if [ ! -r "${v_db_version_file}" ]
+    then
+      echo "Could not find \"${v_db_version_file}\" in current directory. Please download it."
+      exit 1
+    fi
+    cp -av "${v_db_version_file}" ./docker-images/OracleDatabase/SingleInstance/dockerfiles/${v_db_version}/
   fi
   ./docker-images/OracleDatabase/SingleInstance/dockerfiles/buildContainerImage.sh -v ${v_db_version_param} &
   loop_wait_proc "$!"
