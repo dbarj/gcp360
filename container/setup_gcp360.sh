@@ -135,7 +135,8 @@ chmod 600 ${v_gcp360_config}/gcp360.cfg
 
 mkdir -p ${v_gcloud_dir}
 chown -R gcp360: ${v_gcloud_dir}
-mkdir ${v_gcp360_home}/.config
+mkdir -p ${v_gcp360_home}/.config
+rm -f ${v_gcp360_home}/.config/gcloud
 ln -s ${v_gcloud_dir} ${v_gcp360_home}/.config/gcloud
 
 cd ${v_gcp360_tool}
