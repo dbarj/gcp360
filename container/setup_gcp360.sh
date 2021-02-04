@@ -61,8 +61,8 @@ then
 fi
 chown -R gcp360: ${v_gcp360_www} ${v_gcp360_home}
 
-ORACLE_SID=`awk -F: "/^[^#].*:/ {print \$1}" /etc/oratab`
-ORACLE_HOME=`awk -F: "/^[^#].*:/ {print \$2}" /etc/oratab`
+ORACLE_SID=`awk -F: '/^[^#].*:/ {print $1}' /etc/oratab`
+ORACLE_HOME=`awk -F: '/^[^#].*:/ {print $2}' /etc/oratab`
 
 echo "export ORACLE_HOME=${ORACLE_HOME}" >> ${v_gcp360_home}/.bash_profile
 echo 'export PATH=$PATH:$ORACLE_HOME/bin:$ORACLE_HOME/OPatch' >> ${v_gcp360_home}/.bash_profile

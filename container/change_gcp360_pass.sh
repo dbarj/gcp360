@@ -24,7 +24,7 @@ v_cmd=$(cat <<EOF
 set -eo pipefail
 . oraenv <<< "${ORACLE_SID}"
 
-sqlplus /nolog <<EOM
+sqlplus /nolog <<'EOM'
 whenever sqlerror exit sql.sqlcode
 conn / as sysdba
 col name new_v pdb_name nopri
