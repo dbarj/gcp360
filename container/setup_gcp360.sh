@@ -51,6 +51,7 @@ mkdir -p ${v_gcp360_config}
 mkdir -p ${v_gcp360_netadmin}
 
 mkdir -p /var/www/
+rm -f /var/www/gcp360
 ln -s ${v_gcp360_www} /var/www/gcp360
 
 [ -z "${GCP360_UID}" ] && GCP360_UID=54322
