@@ -54,7 +54,10 @@ mkdir -p /var/www/
 ln -s ${v_gcp360_www} /var/www/gcp360
 
 [ -z "${GCP360_UID}" ] && GCP360_UID=54322
-useradd -u ${GCP360_UID} -g users -m -d ${v_gcp360_home} gcp360
+if ! $(getent passwd gcp360 > /dev/null)
+then
+  useradd -u ${GCP360_UID} -g users -m -d ${v_gcp360_home} gcp360
+fi
 chown -R gcp360: ${v_gcp360_www} ${v_gcp360_home}
 
 ORACLE_SID=`awk -F: "/^[^#].*:/ {print \$1}" /etc/oratab`
