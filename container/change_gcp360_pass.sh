@@ -18,7 +18,7 @@ v_gcp360_pass="$1"
 
 [ -z "$v_gcp360_pass" ] && echo "First parameter must be GCP360 new password." && exit 1
 
-ORACLE_SID=`awk -F: "/^[^#].*:/ {print \$1}" /etc/oratab`
+ORACLE_SID=`awk -F: '/^[^#].*:/ {print $1}' /etc/oratab`
 
 v_cmd=$(cat <<EOF
 set -eo pipefail
