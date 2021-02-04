@@ -25,7 +25,11 @@ set -eo pipefail
 sqlplus /nolog <<EOM
 whenever sqlerror exit sql.sqlcode
 conn / as sysdba
-alter session set container=XEPDB1;
+col name new_v pdb_name nopri
+select name from v$pdbs where CON_ID=3;
+alter session set container=&&pdb_name.;
+undef pdb_name
+col name clear
 alter user GCP360 identified by "${v_gcp360_pass}";
 exit
 EOM

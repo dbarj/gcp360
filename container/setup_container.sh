@@ -165,6 +165,8 @@ docker run \
 -d \
 -p 1521:1521 \
 -e ORACLE_CHARACTERSET=AL32UTF8 \
+-e ORACLE_SID=XE \
+-e ORACLE_PDB=XEPDB1 \
 -e GCP360_BRANCH=${v_git_branch} \
 -e GCP360_UID=${v_gcp360_uid} \
 -v ${v_db_dir}/oradata:/opt/oracle/oradata \
