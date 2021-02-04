@@ -18,15 +18,17 @@ v_gcp360_pass="$1"
 
 [ -z "$v_gcp360_pass" ] && echo "First parameter must be GCP360 new password." && exit 1
 
+ORACLE_SID=`awk -F: "/^[^#].*:/ {print \$1}" /etc/oratab`
+
 v_cmd=$(cat <<EOF
 set -eo pipefail
-. oraenv <<< "XE"
+. oraenv <<< "${ORACLE_SID}"
 
 sqlplus /nolog <<EOM
 whenever sqlerror exit sql.sqlcode
 conn / as sysdba
 col name new_v pdb_name nopri
-select name from v$pdbs where CON_ID=3;
+select name from v\$pdbs where CON_ID=3;
 alter session set container=&&pdb_name.;
 undef pdb_name
 col name clear
