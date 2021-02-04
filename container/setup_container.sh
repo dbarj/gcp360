@@ -37,7 +37,7 @@ v_apache_con_name="gcp360-apache"
 # Don't change unless asked.
 v_git_branch="v1.01"
 v_gcp360_uid=55555
-v_git_oracle_commit_hash="4f064778150234ee2be2a1176b026c5e875965ac"
+# v_git_oracle_commit_hash="4f064778150234ee2be2a1176b026c5e875965ac"
 
 # DB Version
 # v_db_version="18.4.0"
@@ -150,9 +150,9 @@ chown -R 54321:54321 "${v_db_dir}"
 
 cd "${v_db_dir}/setup/"
 
-wget https://raw.githubusercontent.com/dbarj/gcp360/${v_git_branch}/container/enable_max_string.sql
-wget https://raw.githubusercontent.com/dbarj/gcp360/${v_git_branch}/container/create_gcp360.sql
-wget https://raw.githubusercontent.com/dbarj/gcp360/${v_git_branch}/container/setup_gcp360.sh
+wget -nv https://raw.githubusercontent.com/dbarj/gcp360/${v_git_branch}/container/enable_max_string.sql
+wget -nv https://raw.githubusercontent.com/dbarj/gcp360/${v_git_branch}/container/create_gcp360.sql
+# wget -nv https://raw.githubusercontent.com/dbarj/gcp360/${v_git_branch}/container/setup_gcp360.sh
 
 cd -
 
@@ -167,8 +167,6 @@ docker run \
 -e ORACLE_CHARACTERSET=AL32UTF8 \
 -e ORACLE_SID=XE \
 -e ORACLE_PDB=XEPDB1 \
--e GCP360_BRANCH=${v_git_branch} \
--e GCP360_UID=${v_gcp360_uid} \
 -v ${v_db_dir}/oradata:/opt/oracle/oradata \
 -v ${v_db_dir}/setup:/opt/oracle/scripts/setup \
 -v ${v_master_directory}:/u01 \
@@ -180,7 +178,7 @@ v_pid=$!
 set +x
 while :
 do
-  v_out=$(docker logs ${v_gcp360_con_name} 2>&1 >/dev/null)
+  v_out=$(docker logs ${v_gcp360_con_name} 2>&1)
   grep -qF 'DATABASE IS READY TO USE!' <<< "$v_out" && break || true
   if grep -qF 'DATABASE SETUP WAS NOT SUCCESSFUL!' <<< "$v_out" ||
      grep -qE 'Error on line [0-9]+ of "setup_gcp360.sh".' <<< "$v_out"
@@ -194,6 +192,23 @@ done
 set -x
 
 kill ${v_pid}
+
+#############################
+# Setup GCP360 on Container #
+#############################
+
+cd "${v_db_dir}/setup/"
+wget -nv https://raw.githubusercontent.com/dbarj/gcp360/${v_git_branch}/container/setup_gcp360.sh
+
+docker exec \
+-it \
+--user root \
+-e GCP360_BRANCH=${v_git_branch} \
+-e GCP360_UID=${v_gcp360_uid} \
+${v_gcp360_con_name} \
+bash /opt/oracle/scripts/setup/setup_gcp360.sh
+
+cd -
 
 ###########################
 # Docker Image for APACHE #

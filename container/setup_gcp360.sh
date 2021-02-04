@@ -57,9 +57,12 @@ ln -s ${v_gcp360_www} /var/www/gcp360
 useradd -u ${GCP360_UID} -g users -m -d ${v_gcp360_home} gcp360
 chown -R gcp360: ${v_gcp360_www} ${v_gcp360_home}
 
-echo 'export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE' >> ${v_gcp360_home}/.bash_profile
+ORACLE_SID=`awk -F: "/^[^#].*:/ {print \$1}" /etc/oratab`
+ORACLE_HOME=`awk -F: "/^[^#].*:/ {print \$2}" /etc/oratab`
+
+echo "export ORACLE_HOME=${ORACLE_HOME}" >> ${v_gcp360_home}/.bash_profile
 echo 'export PATH=$PATH:$ORACLE_HOME/bin:$ORACLE_HOME/OPatch' >> ${v_gcp360_home}/.bash_profile
-echo 'export ORACLE_SID=XE' >> ${v_gcp360_home}/.bash_profile
+echo "export ORACLE_SID=${ORACLE_SID}" >> ${v_gcp360_home}/.bash_profile
 
 source ${v_gcp360_home}/.bash_profile
 
