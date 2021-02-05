@@ -40,13 +40,13 @@ v_gcp360_uid=55555
 # v_git_oracle_commit_hash="4f064778150234ee2be2a1176b026c5e875965ac"
 
 # DB Version
-# v_db_version="18.4.0"
-# v_db_version_param="${v_db_version} -x"
-# v_db_version_container="${v_db_version}-xe"
-v_db_version="19.3.0"
-v_db_version_param="${v_db_version} -e"
-v_db_version_container="${v_db_version}-ee"
-v_db_version_file="LINUX.X64_193000_db_home.zip"
+v_db_version="18.4.0"
+v_db_version_param="${v_db_version} -x"
+v_db_version_container="${v_db_version}-xe"
+# v_db_version="19.3.0"
+# v_db_version_param="${v_db_version} -e"
+# v_db_version_container="${v_db_version}-ee"
+# v_db_version_file="LINUX.X64_193000_db_home.zip"
 
 # Check if root
 [ "$(id -u -n)" != "root" ] && echo "Must be executed as root! Exiting..." && exit 1
