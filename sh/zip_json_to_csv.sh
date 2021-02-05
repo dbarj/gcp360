@@ -83,6 +83,7 @@ do
   unzip -o -q "${v_zip_file_input}" "${v_json_file}" 2>&- || true
   if [ -s "${v_json_file}" ]
   then
+    echo "Converting ${v_json_file} into ${v_csv_file}."
     set +e
     ${v_json2csv} -i "${v_json_file}" -o "${v_csv_file}" --unwind --flatten-objects
     set -e
