@@ -88,7 +88,11 @@ do
     ${v_json2csv} -i "${v_json_file}" -o "${v_csv_file}" --unwind --flatten-objects
     set -e
     rm -f "${v_json_file}"
-    [ -f "${v_csv_file}" ] && zip -qm -9 "$v_zip_file_output" "${v_csv_file}"
+    if [ -f "${v_csv_file}" ]
+    then
+      gzip "${v_csv_file}"
+      zip -qm -9 "$v_zip_file_output" "${v_csv_file}.gz"
+    fi
   fi
 done
 
