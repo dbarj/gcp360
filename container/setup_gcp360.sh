@@ -157,7 +157,7 @@ ln -sf ${v_gcp360_tool}/app/sh/gcp360_db_only.sh ${v_gcp360_config}/gcp360_db_on
 # cp -av ${v_gcp360_tool}/app/sh/gcp360_cron.sh ${v_gcp360_config}/gcp360_run.sh
 
 # Fix bug with "su - oracle" from root in oracle-linux-7
-[ -f /etc/security/limits.d/*.conf ] && sed -i '/^oracle.*hard.*memlock/s/^/#/' /etc/security/limits.d/*.conf
+[ -f "/etc/security/limits.d/*.conf" ] && sed -i '/^oracle.*hard.*memlock/s/^/#/' /etc/security/limits.d/*.conf
 
 # Change GCP360 password
 v_gcp360_pass="$(openssl rand -hex 6)"
