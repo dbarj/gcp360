@@ -31,7 +31,7 @@ fi
 
 v_config_file="${v_confdir}/${v_config_file}"
 
-GCP360_DB_STEP=5
+GCP360_DB_STEP=6
 
 if [ -f ${v_config_file} ]
 then
