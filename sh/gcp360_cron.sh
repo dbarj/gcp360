@@ -169,6 +169,9 @@ rm -rf ${TMPDIR}/.oci/
 # Skip script merge steps
 [ "${GCP360_SKIP_MERGER_EXP}" != "1" ] && GCP360_SKIP_MERGER_EXP=0
 
+# Skip script converter steps
+[ "${GCP360_SKIP_CONVERT_EXP}" != "1" ] && GCP360_SKIP_CONVERT_EXP=0
+
 # Skip other steps
 [ "${GCP360_SKIP_CLEAN_START}" != "0" ] && GCP360_SKIP_CLEAN_START=1
 [ "${GCP360_SKIP_PLACE_ZIPS}" != "1" ] && GCP360_SKIP_PLACE_ZIPS=0
@@ -333,16 +336,12 @@ else
   echo_skip_section "Export Merge"
 fi
 
-###################
-### Move Output ###
-###################
-
-# Move output to OCI Bucket or to output folder
+# CSV Converter
 
 incr_gcp360_step
-[ $GCP360_LAST_EXEC_STEP -gt $GCP360_CRON_STEP ] && GCP360_SKIP_PLACE_ZIPS=1
+[ $GCP360_LAST_EXEC_STEP -gt $GCP360_CRON_STEP ] && GCP360_SKIP_CONVERT_EXP=1
 
-if [ $GCP360_SKIP_PLACE_ZIPS -eq 0 ]
+if [ ${GCP360_SKIP_CONVERT_EXP} -eq 0 ]
 then
 
   if [ -z "${v_exp_file}" ]
@@ -356,7 +355,38 @@ then
     fi
   fi
 
-  rm -f ${v_dir_gcpout}/gcp_json_export_*.zip
+  v_csv_file=$(sed 's/^gcp_json_export_/gcp_csv_export_/' <<< "${v_exp_file}")
+  echoTime "Log File: tail -f ${v_dir_gcplog}/zip_json_to_csv.log"
+  bash ${v_dir_gcp360}/sh/zip_json_to_csv.sh "${v_dir_gcpexp}/${v_exp_file}" "${v_dir_gcpexp}/${v_csv_file}" > ${v_dir_gcplog}/zip_json_to_csv.log 2>&1
+
+else
+  echo_skip_section "Convert JSON to CSV"
+fi
+
+###################
+### Move Output ###
+###################
+
+# Move output to OCI Bucket or to output folder
+
+incr_gcp360_step
+[ $GCP360_LAST_EXEC_STEP -gt $GCP360_CRON_STEP ] && GCP360_SKIP_PLACE_ZIPS=1
+
+if [ $GCP360_SKIP_PLACE_ZIPS -eq 0 ]
+then
+
+  if [ -z "${v_csv_file}" ]
+  then
+    if ls gcp_csv_export_*.zip 1> /dev/null 2>&1
+    then
+      v_csv_file=$(ls -t1 gcp_csv_export_*.zip | head -n 1)
+    else
+      echo_unable_find "gcp_csv_export_*.zip"
+      exitError "Restart the script removing GCP360_LAST_EXEC_STEP from ${v_config_file}."
+    fi
+  fi
+
+  rm -f ${v_dir_gcpout}/gcp_csv_export_*.zip
 
   if [ -n "${v_gcp_bucket}" ]
   then
@@ -364,13 +394,13 @@ then
     export GCP_UP_GZIP=1
     export GCP_CLEAN_BUCKET=1
     echoTime "Log File: tail -f ${v_dir_gcplog}/gcp_bucket_upload.log"
-    bash ${v_dir_gcp360}/sh/gcp_bucket_upload.sh "${v_gcp_bucket}" "${v_dir_gcpexp}/${v_exp_file}" > ${v_dir_gcplog}/gcp_bucket_upload.log 2>&1
+    bash ${v_dir_gcp360}/sh/gcp_bucket_upload.sh "${v_gcp_bucket}" "${v_dir_gcpexp}/${v_csv_file}" > ${v_dir_gcplog}/gcp_bucket_upload.log 2>&1
     unset GCP_CLEAN_BUCKET
     [ -n "${v_csv_file}" ] && bash ${v_dir_gcp360}/sh/gcp_bucket_upload.sh "${v_gcp_bucket}" "${v_dir_gcpexp}/${v_csv_file}" >> ${v_dir_gcplog}/gcp_bucket_upload.log 2>&1
     [ -n "${GCP_CLI_ARGS_BUCKET}" ] && export GCP_CLI_ARGS="${GCP_CLI_ARGS_BKP}"
   else
     [ -n "${v_csv_file}" ] && cp -av ${v_dir_gcpexp}/${v_csv_file} ${v_dir_gcpout}
-    cp -av ${v_dir_gcpexp}/${v_exp_file} ${v_dir_gcpout}
+    cp -av ${v_dir_gcpexp}/${v_csv_file} ${v_dir_gcpout}
   fi
 else
   echo_skip_section "Zip Prepare"
@@ -542,6 +572,7 @@ then
   echoTime "Moving processed files."
 
   move_exp_to_processed "${v_dir_gcpexp}/gcp_json_export_*.zip"
+  move_exp_to_processed "${v_dir_gcpexp}/gcp_csv_export_*.zip"
   
   mv ${v_gcp_file} ${v_dir_gcpout}/processed/
 else
