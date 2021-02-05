@@ -227,7 +227,7 @@ UNDEF gcp360_step_file
 
 -- Check table in csv zip - report tables
 @@&&fc_def_output_file. gcp360_step_file 'gcp360_check_csv_zip.sql'
-HOS cat &&gcp360_csv_files. | &&cmd_grep. -o -E '^.*-' | sort -u | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET in_zip=1 WHERE source='$line';"; done > &&gcp360_step_file.
+HOS cat &&gcp360_csv_files. | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET in_zip=1 WHERE source='$line';"; done > &&gcp360_step_file.
 HOS echo 'COMMIT;' >> &&gcp360_step_file.
 @&&gcp360_step_file.
 @@&&fc_zip_driver_files. &&gcp360_step_file.
