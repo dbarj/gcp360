@@ -399,10 +399,8 @@ then
     echoTime "Log File: tail -f ${v_dir_gcplog}/gcp_bucket_upload.log"
     bash ${v_dir_gcp360}/sh/gcp_bucket_upload.sh "${v_gcp_bucket}" "${v_dir_gcpexp}/${v_csv_file}" > ${v_dir_gcplog}/gcp_bucket_upload.log 2>&1
     unset GCP_CLEAN_BUCKET
-    [ -n "${v_csv_file}" ] && bash ${v_dir_gcp360}/sh/gcp_bucket_upload.sh "${v_gcp_bucket}" "${v_dir_gcpexp}/${v_csv_file}" >> ${v_dir_gcplog}/gcp_bucket_upload.log 2>&1
     [ -n "${GCP_CLI_ARGS_BUCKET}" ] && export GCP_CLI_ARGS="${GCP_CLI_ARGS_BKP}"
   else
-    [ -n "${v_csv_file}" ] && cp -av ${v_dir_gcpexp}/${v_csv_file} ${v_dir_gcpout}
     cp -av ${v_dir_gcpexp}/${v_csv_file} ${v_dir_gcpout}
   fi
 else
