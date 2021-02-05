@@ -112,20 +112,20 @@ CREATE TABLE "&&gcp360_obj_jsontabs."
 COMPRESS NOPARALLEL NOMONITORING;
 
 @@&&fc_def_output_file. gcp360_step_file 'gcp360_load_jsontabs.sql'
-HOS cat &&gcp360_tables. | sort -u | while read line || [ -n "$line" ]; do echo "INSERT INTO \"&&gcp360_obj_jsontabs.\" (source,table_name,description,table_type) VALUES ('$(&&cmd_awk. -F',' '{print $1}' <<< "$line")','$(&&cmd_awk. -F',' '{print $2}' <<< "$line")','$(&&cmd_awk. -F',' '{print $3}' <<< "$line")','JSON');"; done >> &&gcp360_step_file.
+HOS cat &&gcp360_tables. | sort -u | while read line || [ -n "$line" ]; do echo "INSERT INTO \"&&gcp360_obj_jsontabs.\" (source,table_name,description,table_type) VALUES ('$(&&cmd_awk. -F',' '{print $1}' <<< "$line")','$(&&cmd_awk. -F',' '{print $2}' <<< "$line")','$(&&cmd_awk. -F',' '{print $3}' <<< "$line")','CSV');"; done >> &&gcp360_step_file.
 HOS echo 'COMMIT;' >> &&gcp360_step_file.
 @&&gcp360_step_file.
 @@&&fc_zip_driver_files. &&gcp360_step_file.
 UNDEF gcp360_step_file
 
-INSERT INTO "&&gcp360_obj_jsontabs." (source,table_name,table_type)
-VALUES ('reports_usage-', 'GCP360_REPORTS_USAGE','CSV');
-
--- Commented while not yet implemented.
-INSERT INTO "&&gcp360_obj_jsontabs." (source,table_name,table_type)
-VALUES ('reports_cost-', 'GCP360_REPORTS_COST','CSV');
-
-COMMIT;
+-- INSERT INTO "&&gcp360_obj_jsontabs." (source,table_name,table_type)
+-- VALUES ('reports_usage-', 'GCP360_REPORTS_USAGE','CSV');
+-- 
+-- -- Commented while not yet implemented.
+-- INSERT INTO "&&gcp360_obj_jsontabs." (source,table_name,table_type)
+-- VALUES ('reports_cost-', 'GCP360_REPORTS_COST','CSV');
+-- 
+-- COMMIT;
 
 ------------------------------------------
 
