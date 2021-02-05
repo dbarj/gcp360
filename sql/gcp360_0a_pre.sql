@@ -255,7 +255,7 @@ UNDEF gcp360_step_file
 ----------------------------------------
 
 @@&&fc_def_empty_var. gcp360_csv_files
-@@&&moat369_sw_folder./gcp360_fc_csv_usage_extractor.sql
+@@&&moat369_sw_folder./gcp360_fc_csv_extractor.sql
 
 @@&&fc_def_output_file. gcp360_csv_files 'gcp_csv_export_list.txt'
 @@&&fc_clean_file_name. gcp360_csv_files gcp360_csv_files_nopath "PATH"
