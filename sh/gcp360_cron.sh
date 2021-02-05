@@ -56,6 +56,9 @@ incr_gcp360_step ()
   [ -z "$GCP360_CRON_STEP" ] && GCP360_CRON_STEP=1 || GCP360_CRON_STEP=$(($GCP360_CRON_STEP+1))
 }
 
+# Change shell encoding
+export LC_ALL=en_US.UTF-8
+
 # If unhandled error, code will stop and save current step.
 trap 'trap_err $LINENO' ERR
 trap 'exitError "Code interrupted."' SIGINT SIGTERM
