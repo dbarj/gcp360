@@ -188,6 +188,11 @@ chmod g+w ${v_gcp360_tool}/out/
 rm -f ${v_gcp360_home}/gcp360_tool
 ln -s ${v_gcp360_tool} ${v_gcp360_home}/gcp360_tool
 
+### Install npn and json2csv
+
+curl -sL https://rpm.nodesource.com/setup_15.x | bash -
+yum -y install nodejs
+
 yum clean all
 
 ##############
