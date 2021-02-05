@@ -3,9 +3,9 @@
 
 @@&&fc_set_term_off.
 
-HOS ls -1 &&moat369_sw_output_fdr./gcp_csv_extractor_*.zip 2>&- > &&step_csv_file_name.
+HOS ls -1 &&moat369_sw_output_fdr./gcp_csv_export_*.zip 2>&- > &&step_csv_file_name.
 HOS printf "HOS rm -f &&step_csv_file_driver." > &&step_csv_file_driver.
-HOS if [ $(cat &&step_csv_file_name. | wc -l) -ge 2 ]; then printf "PRO More than ONE zip file like gcp_csv_extractor_*.zip found in '&&moat369_sw_output_fdr.'.\nHOS rm -f original_settings.sql &&step_csv_file_name. &&step_csv_file_driver.\nEXIT 1" > &&step_csv_file_driver.; fi
+HOS if [ $(cat &&step_csv_file_name. | wc -l) -ge 2 ]; then printf "PRO More than ONE zip file like gcp_csv_export_*.zip found in '&&moat369_sw_output_fdr.'.\nHOS rm -f original_settings.sql &&step_csv_file_name. &&step_csv_file_driver.\nEXIT 1" > &&step_csv_file_driver.; fi
 
 SET TERM ON
 
