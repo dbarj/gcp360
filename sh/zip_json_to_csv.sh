@@ -22,7 +22,7 @@
 # Created on: Aug/2018 by Rodrigo Jorge
 # Version 1.01
 #************************************************************************
-set -e
+set -eou pipefail
 
 # Define paths for oci-cli and jq or put them on $PATH. Don't use relative PATHs in the variables below.
 v_json2csv="json2csv"
@@ -79,13 +79,15 @@ v_json_files=$(unzip -Z -1 "${v_zip_file_input}" "*.json") && v_ret=$? || v_ret=
 
 for v_json_file in $v_json_files
 do
-  i=1
+  v_csv_file="${v_json_file%.*}.csv"
   unzip -o -q "${v_zip_file_input}" "${v_json_file}" 2>&- || true
   if [ -s "${v_json_file}" ]
   then
-    ${v_json2csv} -i "${v_json_file}" -o "${v_json_file}.csv" --unwind --flatten-objects
+    set +e
+    ${v_json2csv} -i "${v_json_file}" -o "${v_csv_file}" --unwind --flatten-objects
+    set -e
     rm -f "${v_json_file}"
-    zip -qm -9 "$v_zip_file_output" "${v_json_file}.csv"
+    [ -f "${v_csv_file}" ] && zip -qm -9 "$v_zip_file_output" "${v_csv_file}"
   fi
 done
 
