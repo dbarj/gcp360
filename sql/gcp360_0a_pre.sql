@@ -265,6 +265,7 @@ UNDEF gcp360_step_file
 @@&&fc_spool_start.
 SPO &&gcp360_step_file.
 PRO HOS unzip -Z -1 &&gcp360_csv_report_zip. | &&cmd_grep. -E '.csv.gz$' > &&gcp360_csv_files.
+PRO HOS unzip -Z -1 &&gcp360_csv_report_zip. | &&cmd_grep. -E '.csv$' >> &&gcp360_csv_files.
 SPO OFF
 @@&&fc_spool_end.
 @@&&gcp360_loc_skip.&&gcp360_step_file.

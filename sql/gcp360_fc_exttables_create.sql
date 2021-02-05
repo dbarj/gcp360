@@ -217,7 +217,7 @@ HOS echo 'COMMIT;' >> &&gcp360_step_file.
 @@&&fc_zip_driver_files. &&gcp360_step_file.
 UNDEF gcp360_step_file
 
--- Check table in json csv
+-- Check table in column csv
 @@&&fc_def_output_file. gcp360_step_file 'gcp360_check_json_csv.sql'
 HOS cat &&gcp360_columns. | &&cmd_awk. -F',' '{print $1}' | sort -u | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET in_col_csv=1 WHERE source='$line';"; done > &&gcp360_step_file.
 HOS echo 'COMMIT;' >> &&gcp360_step_file.
