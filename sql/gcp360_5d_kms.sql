@@ -1,11 +1,11 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_KMS_IMPORT_JOBS'
-@@&&fc_json_loader. 'GCP_KMS_KEYRINGS'
-@@&&fc_json_loader. 'GCP_KMS_KEYS_VERSIONS'
-@@&&fc_json_loader. 'GCP_KMS_KEYS'
-@@&&fc_json_loader. 'GCP_KMS_LOCATIONS'
+@@&&fc_table_loader. 'GCP_KMS_IMPORT_JOBS'
+@@&&fc_table_loader. 'GCP_KMS_KEYRINGS'
+@@&&fc_table_loader. 'GCP_KMS_KEYS_VERSIONS'
+@@&&fc_table_loader. 'GCP_KMS_KEYS'
+@@&&fc_table_loader. 'GCP_KMS_LOCATIONS'
 -----------------------------------------
 
 DEF title = 'Kms Import Jobs'

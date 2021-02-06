@@ -1,11 +1,11 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_COMPONENTS_REPOSITORIES'
-@@&&fc_json_loader. 'GCP_COMPONENTS'
-@@&&fc_json_loader. 'GCP_CONFIG_CONFIGURATIONS'
-@@&&fc_json_loader. 'GCP_CONFIG'
-@@&&fc_json_loader. 'GCP_SOURCE_REPOS'
+@@&&fc_table_loader. 'GCP_COMPONENTS_REPOSITORIES'
+@@&&fc_table_loader. 'GCP_COMPONENTS'
+@@&&fc_table_loader. 'GCP_CONFIG_CONFIGURATIONS'
+@@&&fc_table_loader. 'GCP_CONFIG'
+@@&&fc_table_loader. 'GCP_SOURCE_REPOS'
 -----------------------------------------
 
 DEF title = 'Components Repositories'

@@ -1,10 +1,10 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_ASSET_FEEDS'
-@@&&fc_json_loader. 'GCP_SCC_ASSETS'
-@@&&fc_json_loader. 'GCP_SCC_FINDINGS'
-@@&&fc_json_loader. 'GCP_SCC_NOTIFICATIONS'
+@@&&fc_table_loader. 'GCP_ASSET_FEEDS'
+@@&&fc_table_loader. 'GCP_SCC_ASSETS'
+@@&&fc_table_loader. 'GCP_SCC_FINDINGS'
+@@&&fc_table_loader. 'GCP_SCC_NOTIFICATIONS'
 -----------------------------------------
 
 DEF title = 'Asset Feeds'

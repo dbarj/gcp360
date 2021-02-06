@@ -1,13 +1,13 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_APP_DOMAIN_MAPPINGS'
-@@&&fc_json_loader. 'GCP_APP_FIREWALL_RULES'
-@@&&fc_json_loader. 'GCP_APP_INSTANCES'
-@@&&fc_json_loader. 'GCP_APP_REGIONS'
-@@&&fc_json_loader. 'GCP_APP_SERVICES'
-@@&&fc_json_loader. 'GCP_APP_SSL_CERTIFICATES'
-@@&&fc_json_loader. 'GCP_APP_VERSIONS'
+@@&&fc_table_loader. 'GCP_APP_DOMAIN_MAPPINGS'
+@@&&fc_table_loader. 'GCP_APP_FIREWALL_RULES'
+@@&&fc_table_loader. 'GCP_APP_INSTANCES'
+@@&&fc_table_loader. 'GCP_APP_REGIONS'
+@@&&fc_table_loader. 'GCP_APP_SERVICES'
+@@&&fc_table_loader. 'GCP_APP_SSL_CERTIFICATES'
+@@&&fc_table_loader. 'GCP_APP_VERSIONS'
 -----------------------------------------
 
 DEF title = 'App Domain Mappings'

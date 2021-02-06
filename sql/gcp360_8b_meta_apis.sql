@@ -1,14 +1,14 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_META_APIS_COLLECTIONS'
-@@&&fc_json_loader. 'GCP_META_APIS_DISCOVERY'
-@@&&fc_json_loader. 'GCP_META_APIS_MESSAGES'
-@@&&fc_json_loader. 'GCP_META_APIS_METHODS'
-@@&&fc_json_loader. 'GCP_META_APIS'
-@@&&fc_json_loader. 'GCP_META_CACHE_COMPLETERS'
-@@&&fc_json_loader. 'GCP_META_CACHE'
-@@&&fc_json_loader. 'GCP_META_CLI_TREES'
+@@&&fc_table_loader. 'GCP_META_APIS_COLLECTIONS'
+@@&&fc_table_loader. 'GCP_META_APIS_DISCOVERY'
+@@&&fc_table_loader. 'GCP_META_APIS_MESSAGES'
+@@&&fc_table_loader. 'GCP_META_APIS_METHODS'
+@@&&fc_table_loader. 'GCP_META_APIS'
+@@&&fc_table_loader. 'GCP_META_CACHE_COMPLETERS'
+@@&&fc_table_loader. 'GCP_META_CACHE'
+@@&&fc_table_loader. 'GCP_META_CLI_TREES'
 -----------------------------------------
 
 DEF title = 'Meta Apis Collections'

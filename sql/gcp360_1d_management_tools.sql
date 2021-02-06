@@ -1,19 +1,19 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_DEBUG_LOGPOINTS'
-@@&&fc_json_loader. 'GCP_DEBUG_SNAPSHOTS'
-@@&&fc_json_loader. 'GCP_DEBUG_TARGETS'
-@@&&fc_json_loader. 'GCP_DEPLOYMENT_MANAGER_DEPLOYMENTS'
-@@&&fc_json_loader. 'GCP_DEPLOYMENT_MANAGER_MANIFESTS'
-@@&&fc_json_loader. 'GCP_DEPLOYMENT_MANAGER_RESOURCES'
-@@&&fc_json_loader. 'GCP_DEPLOYMENT_MANAGER_TYPES'
-@@&&fc_json_loader. 'GCP_LOGGING_LOGS'
-@@&&fc_json_loader. 'GCP_LOGGING_METRICS'
-@@&&fc_json_loader. 'GCP_LOGGING_RESOURCE_DESCRIPTORS'
-@@&&fc_json_loader. 'GCP_LOGGING_SINKS'
-@@&&fc_json_loader. 'GCP_ORGANIZATIONS'
-@@&&fc_json_loader. 'GCP_PROJECTS'
+@@&&fc_table_loader. 'GCP_DEBUG_LOGPOINTS'
+@@&&fc_table_loader. 'GCP_DEBUG_SNAPSHOTS'
+@@&&fc_table_loader. 'GCP_DEBUG_TARGETS'
+@@&&fc_table_loader. 'GCP_DEPLOYMENT_MANAGER_DEPLOYMENTS'
+@@&&fc_table_loader. 'GCP_DEPLOYMENT_MANAGER_MANIFESTS'
+@@&&fc_table_loader. 'GCP_DEPLOYMENT_MANAGER_RESOURCES'
+@@&&fc_table_loader. 'GCP_DEPLOYMENT_MANAGER_TYPES'
+@@&&fc_table_loader. 'GCP_LOGGING_LOGS'
+@@&&fc_table_loader. 'GCP_LOGGING_METRICS'
+@@&&fc_table_loader. 'GCP_LOGGING_RESOURCE_DESCRIPTORS'
+@@&&fc_table_loader. 'GCP_LOGGING_SINKS'
+@@&&fc_table_loader. 'GCP_ORGANIZATIONS'
+@@&&fc_table_loader. 'GCP_PROJECTS'
 -----------------------------------------
 
 DEF title = 'Debug Logpoints'

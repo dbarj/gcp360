@@ -6,7 +6,7 @@
 DEF gcp360_collector  = '&&moat369_sw_base./sh/gcp_json_export.sh'
 DEF gcp360_tables     = '&&moat369_sw_base./sh/gcp_table_json.csv'
 DEF gcp360_columns    = '&&moat369_sw_base./sh/gcp_cols_json.csv'
-DEF fc_json_loader    = '&&moat369_sw_folder./gcp360_fc_json_loader.sql'
+DEF fc_table_loader   = '&&moat369_sw_folder./gcp360_fc_table_loader.sql'
 DEF fc_json_metadata  = '&&moat369_sw_folder./gcp360_fc_json_metadata.sql'
 DEF fc_gen_select     = '&&moat369_sw_folder./gcp360_fc_gen_select.sql'
 

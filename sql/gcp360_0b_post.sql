@@ -31,7 +31,7 @@ UNDEF gcp360_log_csv
 -- Undef variables
 UNDEF gcp360_collector
 UNDEF gcp360_tables
-UNDEF fc_json_loader
+UNDEF fc_table_loader
 UNDEF fc_json_metadata
 UNDEF gcp360_tzcolformat
 UNDEF skip_billing_sql

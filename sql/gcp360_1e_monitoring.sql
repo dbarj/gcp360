@@ -1,7 +1,7 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_MONITORING_DASHBOARDS'
+@@&&fc_table_loader. 'GCP_MONITORING_DASHBOARDS'
 -----------------------------------------
 
 DEF title = 'Monitoring Dashboards'

@@ -1,7 +1,7 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_BILLING_BUDGETS'
+@@&&fc_table_loader. 'GCP_BILLING_BUDGETS'
 -----------------------------------------
 
 DEF title = 'Billing Budgets'

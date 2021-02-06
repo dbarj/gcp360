@@ -1,10 +1,10 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_SERVICE_DIRECTORY_ENDPOINTS'
-@@&&fc_json_loader. 'GCP_SERVICE_DIRECTORY_LOCATIONS'
-@@&&fc_json_loader. 'GCP_SERVICE_DIRECTORY_NAMESPACES'
-@@&&fc_json_loader. 'GCP_SERVICE_DIRECTORY_SERVICES'
+@@&&fc_table_loader. 'GCP_SERVICE_DIRECTORY_ENDPOINTS'
+@@&&fc_table_loader. 'GCP_SERVICE_DIRECTORY_LOCATIONS'
+@@&&fc_table_loader. 'GCP_SERVICE_DIRECTORY_NAMESPACES'
+@@&&fc_table_loader. 'GCP_SERVICE_DIRECTORY_SERVICES'
 -----------------------------------------
 
 DEF title = 'Service Directory Endpoints'

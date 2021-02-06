@@ -1,15 +1,15 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_GAME_LOCATIONS'
-@@&&fc_json_loader. 'GCP_GAME_SERVERS_CLUSTERS'
-@@&&fc_json_loader. 'GCP_GAME_SERVERS_CONFIGS'
-@@&&fc_json_loader. 'GCP_GAME_SERVERS_DEPLOYMENTS'
-@@&&fc_json_loader. 'GCP_GAME_SERVERS_REALMS'
-@@&&fc_json_loader. 'GCP_HEALTHCARE_DATASETS'
-@@&&fc_json_loader. 'GCP_HEALTHCARE_DICOM_STORES'
-@@&&fc_json_loader. 'GCP_HEALTHCARE_FHIR_STORES'
-@@&&fc_json_loader. 'GCP_HEALTHCARE_HL7V2_STORES'
+@@&&fc_table_loader. 'GCP_GAME_LOCATIONS'
+@@&&fc_table_loader. 'GCP_GAME_SERVERS_CLUSTERS'
+@@&&fc_table_loader. 'GCP_GAME_SERVERS_CONFIGS'
+@@&&fc_table_loader. 'GCP_GAME_SERVERS_DEPLOYMENTS'
+@@&&fc_table_loader. 'GCP_GAME_SERVERS_REALMS'
+@@&&fc_table_loader. 'GCP_HEALTHCARE_DATASETS'
+@@&&fc_table_loader. 'GCP_HEALTHCARE_DICOM_STORES'
+@@&&fc_table_loader. 'GCP_HEALTHCARE_FHIR_STORES'
+@@&&fc_table_loader. 'GCP_HEALTHCARE_HL7V2_STORES'
 -----------------------------------------
 
 DEF title = 'Game Locations'

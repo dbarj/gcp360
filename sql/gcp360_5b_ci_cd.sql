@@ -1,18 +1,18 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_ARTIFACTS_DOCKER_IMAGES'
-@@&&fc_json_loader. 'GCP_ARTIFACTS_DOCKER_TAGS'
-@@&&fc_json_loader. 'GCP_ARTIFACTS_LOCATIONS'
-@@&&fc_json_loader. 'GCP_ARTIFACTS_PACKAGES'
-@@&&fc_json_loader. 'GCP_ARTIFACTS_REPOSITORIES'
-@@&&fc_json_loader. 'GCP_ARTIFACTS_TAGS'
-@@&&fc_json_loader. 'GCP_ARTIFACTS_VERSIONS'
-@@&&fc_json_loader. 'GCP_BUILDS'
-@@&&fc_json_loader. 'GCP_SCHEDULER_JOBS'
-@@&&fc_json_loader. 'GCP_TASKS_LOCATIONS'
-@@&&fc_json_loader. 'GCP_TASKS_QUEUES'
-@@&&fc_json_loader. 'GCP_TASKS'
+@@&&fc_table_loader. 'GCP_ARTIFACTS_DOCKER_IMAGES'
+@@&&fc_table_loader. 'GCP_ARTIFACTS_DOCKER_TAGS'
+@@&&fc_table_loader. 'GCP_ARTIFACTS_LOCATIONS'
+@@&&fc_table_loader. 'GCP_ARTIFACTS_PACKAGES'
+@@&&fc_table_loader. 'GCP_ARTIFACTS_REPOSITORIES'
+@@&&fc_table_loader. 'GCP_ARTIFACTS_TAGS'
+@@&&fc_table_loader. 'GCP_ARTIFACTS_VERSIONS'
+@@&&fc_table_loader. 'GCP_BUILDS'
+@@&&fc_table_loader. 'GCP_SCHEDULER_JOBS'
+@@&&fc_table_loader. 'GCP_TASKS_LOCATIONS'
+@@&&fc_table_loader. 'GCP_TASKS_QUEUES'
+@@&&fc_table_loader. 'GCP_TASKS'
 -----------------------------------------
 
 DEF title = 'Artifacts Docker Images'

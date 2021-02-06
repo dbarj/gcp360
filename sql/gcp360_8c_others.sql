@@ -1,8 +1,8 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_EVENTARC_TRIGGERS'
-@@&&fc_json_loader. 'GCP_WORKSPACE_ADD_ONS_DEPLOYMENTS'
+@@&&fc_table_loader. 'GCP_EVENTARC_TRIGGERS'
+@@&&fc_table_loader. 'GCP_WORKSPACE_ADD_ONS_DEPLOYMENTS'
 -----------------------------------------
 
 DEF title = 'Eventarc Triggers'

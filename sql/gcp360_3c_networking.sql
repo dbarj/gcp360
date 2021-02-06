@@ -1,7 +1,7 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_NETWORK_MANAGEMENT_CONNECTIVITY_TESTS'
+@@&&fc_table_loader. 'GCP_NETWORK_MANAGEMENT_CONNECTIVITY_TESTS'
 -----------------------------------------
 
 DEF title = 'Network Management Connectivity Tests'

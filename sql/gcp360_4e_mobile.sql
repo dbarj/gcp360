@@ -1,13 +1,13 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_FIREBASE_TEST_ANDROID_LOCALES'
-@@&&fc_json_loader. 'GCP_FIREBASE_TEST_ANDROID_MODELS'
-@@&&fc_json_loader. 'GCP_FIREBASE_TEST_ANDROID_VERSIONS'
-@@&&fc_json_loader. 'GCP_FIREBASE_TEST_IOS_LOCALES'
-@@&&fc_json_loader. 'GCP_FIREBASE_TEST_IOS_MODELS'
-@@&&fc_json_loader. 'GCP_FIREBASE_TEST_IOS_VERSIONS'
-@@&&fc_json_loader. 'GCP_FIREBASE_TEST_NETWORK_PROFILES'
+@@&&fc_table_loader. 'GCP_FIREBASE_TEST_ANDROID_LOCALES'
+@@&&fc_table_loader. 'GCP_FIREBASE_TEST_ANDROID_MODELS'
+@@&&fc_table_loader. 'GCP_FIREBASE_TEST_ANDROID_VERSIONS'
+@@&&fc_table_loader. 'GCP_FIREBASE_TEST_IOS_LOCALES'
+@@&&fc_table_loader. 'GCP_FIREBASE_TEST_IOS_MODELS'
+@@&&fc_table_loader. 'GCP_FIREBASE_TEST_IOS_VERSIONS'
+@@&&fc_table_loader. 'GCP_FIREBASE_TEST_NETWORK_PROFILES'
 -----------------------------------------
 
 DEF title = 'Firebase Test Android Locales'

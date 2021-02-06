@@ -1,7 +1,7 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP360_RESTYPES'
+@@&&fc_table_loader. 'GCP360_RESTYPES'
 -----------------------------------------
 
 DEF title = 'Resource Types'

@@ -1,13 +1,13 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_DNS_DNS_KEYS'
-@@&&fc_json_loader. 'GCP_DNS_DOMAINS_LIST_USER_VERIFIED'
-@@&&fc_json_loader. 'GCP_DNS_MANAGED_ZONES'
-@@&&fc_json_loader. 'GCP_DNS_POLICIES'
-@@&&fc_json_loader. 'GCP_DNS_PROJECT_INFO'
-@@&&fc_json_loader. 'GCP_DNS_RECORD_SETS_CHANGES'
-@@&&fc_json_loader. 'GCP_DNS_RECORD_SETS'
+@@&&fc_table_loader. 'GCP_DNS_DNS_KEYS'
+@@&&fc_table_loader. 'GCP_DNS_DOMAINS_LIST_USER_VERIFIED'
+@@&&fc_table_loader. 'GCP_DNS_MANAGED_ZONES'
+@@&&fc_table_loader. 'GCP_DNS_POLICIES'
+@@&&fc_table_loader. 'GCP_DNS_PROJECT_INFO'
+@@&&fc_table_loader. 'GCP_DNS_RECORD_SETS_CHANGES'
+@@&&fc_table_loader. 'GCP_DNS_RECORD_SETS'
 -----------------------------------------
 
 DEF title = 'Dns Dns Keys'

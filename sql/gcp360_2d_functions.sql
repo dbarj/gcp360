@@ -1,9 +1,9 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_FUNCTIONS_EVENT_TYPES'
-@@&&fc_json_loader. 'GCP_FUNCTIONS_REGIONS'
-@@&&fc_json_loader. 'GCP_FUNCTIONS'
+@@&&fc_table_loader. 'GCP_FUNCTIONS_EVENT_TYPES'
+@@&&fc_table_loader. 'GCP_FUNCTIONS_REGIONS'
+@@&&fc_table_loader. 'GCP_FUNCTIONS'
 -----------------------------------------
 
 DEF title = 'Functions Event Types'

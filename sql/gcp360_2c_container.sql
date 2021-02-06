@@ -1,12 +1,12 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_CONTAINER_BINAUTHZ_ATTESTATIONS'
-@@&&fc_json_loader. 'GCP_CONTAINER_BINAUTHZ_ATTESTORS'
-@@&&fc_json_loader. 'GCP_CONTAINER_CLUSTERS'
-@@&&fc_json_loader. 'GCP_CONTAINER_HUB_MEMBERSHIPS'
-@@&&fc_json_loader. 'GCP_CONTAINER_IMAGES'
-@@&&fc_json_loader. 'GCP_CONTAINER_NODE_POOLS'
+@@&&fc_table_loader. 'GCP_CONTAINER_BINAUTHZ_ATTESTATIONS'
+@@&&fc_table_loader. 'GCP_CONTAINER_BINAUTHZ_ATTESTORS'
+@@&&fc_table_loader. 'GCP_CONTAINER_CLUSTERS'
+@@&&fc_table_loader. 'GCP_CONTAINER_HUB_MEMBERSHIPS'
+@@&&fc_table_loader. 'GCP_CONTAINER_IMAGES'
+@@&&fc_table_loader. 'GCP_CONTAINER_NODE_POOLS'
 -----------------------------------------
 
 DEF title = 'Container Binauthz Attestations'

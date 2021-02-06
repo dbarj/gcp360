@@ -1,12 +1,12 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_IOT_DEVICES_CONFIGS'
-@@&&fc_json_loader. 'GCP_IOT_DEVICES_CREDENTIALS'
-@@&&fc_json_loader. 'GCP_IOT_DEVICES_STATES'
-@@&&fc_json_loader. 'GCP_IOT_DEVICES'
-@@&&fc_json_loader. 'GCP_IOT_REGISTRIES_CREDENTIALS'
-@@&&fc_json_loader. 'GCP_IOT_REGISTRIES'
+@@&&fc_table_loader. 'GCP_IOT_DEVICES_CONFIGS'
+@@&&fc_table_loader. 'GCP_IOT_DEVICES_CREDENTIALS'
+@@&&fc_table_loader. 'GCP_IOT_DEVICES_STATES'
+@@&&fc_table_loader. 'GCP_IOT_DEVICES'
+@@&&fc_table_loader. 'GCP_IOT_REGISTRIES_CREDENTIALS'
+@@&&fc_table_loader. 'GCP_IOT_REGISTRIES'
 -----------------------------------------
 
 DEF title = 'Iot Devices Configs'

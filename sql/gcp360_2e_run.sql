@@ -1,12 +1,12 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_RUN_CONFIGURATIONS'
-@@&&fc_json_loader. 'GCP_RUN_DOMAIN_MAPPINGS'
-@@&&fc_json_loader. 'GCP_RUN_REGIONS'
-@@&&fc_json_loader. 'GCP_RUN_REVISIONS'
-@@&&fc_json_loader. 'GCP_RUN_ROUTES'
-@@&&fc_json_loader. 'GCP_RUN_SERVICES'
+@@&&fc_table_loader. 'GCP_RUN_CONFIGURATIONS'
+@@&&fc_table_loader. 'GCP_RUN_DOMAIN_MAPPINGS'
+@@&&fc_table_loader. 'GCP_RUN_REGIONS'
+@@&&fc_table_loader. 'GCP_RUN_REVISIONS'
+@@&&fc_table_loader. 'GCP_RUN_ROUTES'
+@@&&fc_table_loader. 'GCP_RUN_SERVICES'
 -----------------------------------------
 
 DEF title = 'Run Configurations'

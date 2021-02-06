@@ -164,7 +164,7 @@ do
     fi
   done
   ((--i))
-  mv "${i}.json" "${v_json_file}"
+  mv -f "${i}.json" "${v_json_file}"
   zip -qm -9 "$v_output_zip" "${v_json_file}"
 done
 

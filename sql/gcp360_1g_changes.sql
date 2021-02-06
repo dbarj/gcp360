@@ -1,9 +1,9 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP360_INSTANCES'
-@@&&fc_json_loader. 'GCP360_VOLUMES'
-@@&&fc_json_loader. 'GCP360_SECLISTS'
+@@&&fc_table_loader. 'GCP360_INSTANCES'
+@@&&fc_table_loader. 'GCP360_VOLUMES'
+@@&&fc_table_loader. 'GCP360_SECLISTS'
 -----------------------------------------
 
 DEF gcp360_func_1g = '&&moat369_sw_folder./gcp360_1g_changes_func.sql'

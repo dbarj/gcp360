@@ -1,12 +1,12 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_AI_PLATFORM_JOBS'
-@@&&fc_json_loader. 'GCP_AI_PLATFORM_MODELS'
-@@&&fc_json_loader. 'GCP_AI_PLATFORM_VERSIONS'
-@@&&fc_json_loader. 'GCP_ML_ENGINE_JOBS'
-@@&&fc_json_loader. 'GCP_ML_ENGINE_MODELS'
-@@&&fc_json_loader. 'GCP_ML_ENGINE_VERSIONS'
+@@&&fc_table_loader. 'GCP_AI_PLATFORM_JOBS'
+@@&&fc_table_loader. 'GCP_AI_PLATFORM_MODELS'
+@@&&fc_table_loader. 'GCP_AI_PLATFORM_VERSIONS'
+@@&&fc_table_loader. 'GCP_ML_ENGINE_JOBS'
+@@&&fc_table_loader. 'GCP_ML_ENGINE_MODELS'
+@@&&fc_table_loader. 'GCP_ML_ENGINE_VERSIONS'
 -----------------------------------------
 
 DEF title = 'Ai Platform Jobs'

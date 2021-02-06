@@ -1,13 +1,13 @@
 -----------------------------------------
 -- Tables Used in this Section
 -----------------------------------------
-@@&&fc_json_loader. 'GCP_FILESTORE_INSTANCES'
-@@&&fc_json_loader. 'GCP_FILESTORE_LOCATIONS'
-@@&&fc_json_loader. 'GCP_FILESTORE_REGIONS'
-@@&&fc_json_loader. 'GCP_FILESTORE_ZONES'
-@@&&fc_json_loader. 'GCP_REDIS_INSTANCES'
-@@&&fc_json_loader. 'GCP_REDIS_REGIONS'
-@@&&fc_json_loader. 'GCP_REDIS_ZONES'
+@@&&fc_table_loader. 'GCP_FILESTORE_INSTANCES'
+@@&&fc_table_loader. 'GCP_FILESTORE_LOCATIONS'
+@@&&fc_table_loader. 'GCP_FILESTORE_REGIONS'
+@@&&fc_table_loader. 'GCP_FILESTORE_ZONES'
+@@&&fc_table_loader. 'GCP_REDIS_INSTANCES'
+@@&&fc_table_loader. 'GCP_REDIS_REGIONS'
+@@&&fc_table_loader. 'GCP_REDIS_ZONES'
 -----------------------------------------
 
 DEF title = 'Filestore Instances'
