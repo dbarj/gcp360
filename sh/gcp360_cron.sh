@@ -358,6 +358,7 @@ then
     fi
   fi
 
+  echoTime "Converting JSONs into CSVs."
   v_csv_file=$(sed 's/^gcp_json_export_/gcp_csv_export_/' <<< "${v_exp_file}")
   echoTime "Log File: tail -f ${v_dir_gcplog}/zip_json_to_csv.log"
   bash ${v_dir_gcp360}/sh/zip_json_to_csv.sh "${v_dir_gcpexp}/${v_exp_file}" "${v_dir_gcpexp}/${v_csv_file}" > ${v_dir_gcplog}/zip_json_to_csv.log 2>&1

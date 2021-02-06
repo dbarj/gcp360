@@ -151,7 +151,17 @@ DEF one_spool_text_file = '&&gcp360_log_json.'
 DEF one_spool_text_file_rename = 'N'
 DEF skip_html = '--'
 DEF skip_text_file = ''
-@@&&9a_pre_one.
+
+@@&&fc_def_output_file. gcp360_step_file 'gcp360_check_file.sql'
+DEF gcp360_skip_file = ''
+HOS if [ ! -f "&&gcp360_log_json." ]; then echo "DEF gcp360_skip_file = '&&fc_skip_script.'" > "&&gcp360_step_file."; fi;
+@@&&gcp360_step_file.
+@@&&fc_zip_driver_files. &&gcp360_step_file.
+UNDEF gcp360_step_file
+
+@@&&gcp360_skip_file.&&9a_pre_one.
+
+UNDEF gcp360_skip_file
 
 -----------------------------------------
 
