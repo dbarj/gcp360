@@ -201,17 +201,19 @@ COMPRESS NOPARALLEL NOMONITORING;
 @@&&moat369_sw_folder./gcp360_fc_gcp_costs.sql
 @@&&moat369_sw_folder./gcp360_fc_gcp_extra_tables.sql
 
--- Check if json file is gzip and update file name
-@@&&fc_def_output_file. gcp360_step_file 'gcp360_check_json_zip.sql'
+-- Check if json or csv file is gzip and update file name
+@@&&fc_def_output_file. gcp360_step_file 'gcp360_check_file_gz.sql'
 HOS cat &&gcp360_json_files. | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET source = source || '.gz' WHERE source || '.gz'='$line';"; echo "UPDATE \"&&gcp360_obj_jsoncols.\" SET source = source || '.gz' WHERE source || '.gz'='$line';"; done > &&gcp360_step_file.
+HOS cat &&gcp360_csv_files.  | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET source = source || '.gz' WHERE source || '.gz'='$line';"; echo "UPDATE \"&&gcp360_obj_jsoncols.\" SET source = source || '.gz' WHERE source || '.gz'='$line';"; done >> &&gcp360_step_file.
 HOS echo 'COMMIT;' >> &&gcp360_step_file.
 @&&gcp360_step_file.
 @@&&fc_zip_driver_files. &&gcp360_step_file.
 UNDEF gcp360_step_file
 
--- Check table in json zip
-@@&&fc_def_output_file. gcp360_step_file 'gcp360_check_json_zip.sql'
+-- Check table in json or csv zip
+@@&&fc_def_output_file. gcp360_step_file 'gcp360_check_table_in_zip.sql'
 HOS cat &&gcp360_json_files. | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET in_zip=1 WHERE source='$line';"; done > &&gcp360_step_file.
+HOS cat &&gcp360_csv_files.  | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET in_zip=1 WHERE source='$line';"; done >> &&gcp360_step_file.
 HOS echo 'COMMIT;' >> &&gcp360_step_file.
 @&&gcp360_step_file.
 @@&&fc_zip_driver_files. &&gcp360_step_file.
@@ -220,14 +222,6 @@ UNDEF gcp360_step_file
 -- Check table in column csv
 @@&&fc_def_output_file. gcp360_step_file 'gcp360_check_json_csv.sql'
 HOS cat &&gcp360_columns. | &&cmd_awk. -F',' '{print $1}' | sort -u | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET in_col_csv=1 WHERE source='$line';"; done > &&gcp360_step_file.
-HOS echo 'COMMIT;' >> &&gcp360_step_file.
-@&&gcp360_step_file.
-@@&&fc_zip_driver_files. &&gcp360_step_file.
-UNDEF gcp360_step_file
-
--- Check table in csv zip - report tables
-@@&&fc_def_output_file. gcp360_step_file 'gcp360_check_csv_zip.sql'
-HOS cat &&gcp360_csv_files. | while read line || [ -n "$line" ]; do echo "UPDATE \"&&gcp360_obj_jsontabs.\" SET in_zip=1 WHERE source='$line';"; done > &&gcp360_step_file.
 HOS echo 'COMMIT;' >> &&gcp360_step_file.
 @&&gcp360_step_file.
 @@&&fc_zip_driver_files. &&gcp360_step_file.
@@ -258,17 +252,13 @@ SPO OFF
 COL skip_json_full_loader NEW_V skip_json_full_loader
 SELECT DECODE('&&gcp360_load_mode.','PRE_LOAD','','&&fc_skip_script.') skip_json_full_loader FROM DUAL;
 COL skip_json_full_loader clear
-
 @@&&skip_json_full_loader.&&step_json_full_loader.
 
--- Disable fc_table_loader / fc_csv_loader if did a full PRE_LOAD or if it is OFF
+-- Disable fc_table_loader if did a full PRE_LOAD or if it is OFF
 COL fc_table_loader NEW_V fc_table_loader
-COL fc_csv_loader  NEW_V fc_csv_loader
-SELECT '&&fc_skip_script.' fc_table_loader,
-       '&&fc_skip_script.' fc_csv_loader
+SELECT '&&fc_skip_script.' fc_table_loader
 FROM DUAL WHERE '&&gcp360_load_mode.' != 'ON_DEMAND';
 COL fc_table_loader clear
-COL fc_csv_loader  clear
 
 @@&&fc_zip_driver_files. &&step_json_full_loader.
 UNDEF step_json_full_loader skip_json_full_loader
