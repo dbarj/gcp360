@@ -192,6 +192,7 @@ ln -s ${v_gcp360_tool} ${v_gcp360_home}/gcp360_tool
 
 curl -sL https://rpm.nodesource.com/setup_15.x | bash -
 yum -y install nodejs
+npm install -g json2csv
 
 yum clean all
 
