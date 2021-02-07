@@ -19,7 +19,7 @@ DEF fc_csv_converter_loop  = '&&moat369_sw_folder./gcp360_fc_csv_converter_loc_l
 HOS touch &&gcp360_temp_preproc.
 HOS chmod o+rwx &&gcp360_temp_preproc.
 
-DECLARE 
+DECLARE
   FHANDLE  UTL_FILE.FILE_TYPE;
 BEGIN
   FHANDLE := UTL_FILE.FOPEN('&&gcp360_obj_dir.', '&&gcp360_temp_preproc_nopath.', 'w');
@@ -75,8 +75,8 @@ CREATE TABLE "&&gcp360_temp_exttab."
 )
 ORGANIZATION EXTERNAL
 (  DEFAULT DIRECTORY "&&gcp360_obj_dir."
-   ACCESS PARAMETERS 
-     (records delimited BY newline
+   ACCESS PARAMETERS
+     (records delimited BY '|||'
       preprocessor "&&gcp360_obj_dir.":'&&gcp360_temp_preproc_nopath.'
       nologfile nobadfile nodiscardfile
       fields

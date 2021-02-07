@@ -113,7 +113,14 @@ do
     echo "Converting ${v_json_file} into ${v_csv_file}." | tee >(cat >&2)
     v_time_begin=$SECONDS
     set +e
-    timeout ${v_json2csv_timeout} ${v_json2csv} -i "${v_json_file}" -o "${v_csv_file}" --unwind --flatten-objects --no-streaming
+    timeout ${v_json2csv_timeout} \
+    ${v_json2csv} \
+    -i "${v_json_file}" \
+    -o "${v_csv_file}" \
+    --unwind \
+    --flatten-objects \
+    --no-streaming \
+    -e '|||'
     set -e
     v_time_end=$SECONDS
     echo "Elapsed time: $(convertsecs $((v_time_end-v_time_begin)))."
