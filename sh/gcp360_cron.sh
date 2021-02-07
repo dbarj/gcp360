@@ -562,7 +562,7 @@ move_exp_to_processed ()
 {
   if ls ${1} 1> /dev/null 2>&1
   then
-    mv ${1} ${v_dir_gcpexp}/processed/
+    mv -f ${1} ${v_dir_gcpexp}/processed/
   fi
 }
 
