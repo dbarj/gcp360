@@ -26,6 +26,8 @@ set -eou pipefail
 
 # Define paths for oci-cli and jq or put them on $PATH. Don't use relative PATHs in the variables below.
 v_json2csv="json2csv"
+v_jq="jq"
+v_json2csv_timeout=60
 
 if [ -z "${BASH_VERSION}" -o "${BASH}" = "/bin/sh" ]
 then
@@ -68,6 +70,13 @@ then
   exit 1
 fi
 
+if ! $(which ${v_jq} >&- 2>&-)
+then
+  echoError "Could not find jq binary. Please adapt the path in the script if not in \$PATH."
+  echoError "Download page: https://github.com/stedolan/jq/releases"
+  exit 1
+fi
+
 if ! $(which zip >&- 2>&-)
 then
   echoError "Could not find zip binary. Please include it in \$PATH."
@@ -77,16 +86,37 @@ fi
 v_json_files=$(unzip -Z -1 "${v_zip_file_input}" "*.json") && v_ret=$? || v_ret=$?
 [ $v_ret -eq 0 -o $v_ret -eq 11 ] || exitError "Can't zip list ${v_zip_file_input}"
 
+function convertsecs()
+{
+ ((h=${1}/3600))
+ ((m=(${1}%3600)/60))
+ ((s=${1}%60))
+ printf "%02d:%02d:%02d\n" $h $m $s
+}
+
+# To avoid: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+# export NODE_OPTIONS=--max-old-space-size=8192
+
 for v_json_file in $v_json_files
 do
   v_csv_file="${v_json_file%.*}.csv"
   unzip -o -q "${v_zip_file_input}" "${v_json_file}" 2>&- || true
   if [ -s "${v_json_file}" ]
   then
-    echo "Converting ${v_json_file} into ${v_csv_file}."
+    if ${v_jq} -e 'keys_unsorted as $keys
+              | ($keys | length == 0)' "${v_json_file}" > /dev/null
+    then
+      echo "JSON ${v_json_file} is empty." | tee >(cat >&2)
+      rm -f "${v_json_file}"
+      continue
+    fi
+    echo "Converting ${v_json_file} into ${v_csv_file}." | tee >(cat >&2)
+    v_time_begin=$SECONDS
     set +e
-    ${v_json2csv} -i "${v_json_file}" -o "${v_csv_file}" --unwind --flatten-objects
+    timeout ${v_json2csv_timeout} ${v_json2csv} -i "${v_json_file}" -o "${v_csv_file}" --unwind --flatten-objects --no-streaming
     set -e
+    v_time_end=$SECONDS
+    echo "Elapsed time: $(convertsecs $((v_time_end-v_time_begin)))."
     rm -f "${v_json_file}"
     if [ -f "${v_csv_file}" ]
     then
